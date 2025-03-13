@@ -1,3 +1,90 @@
-h1 {
-    color: blue;
+/* top color = blue
+    second color = red
+    third color = yellow
+    fourth color = green
+    fifth color = purple
+*/
+
+#main-header {
+    background-color: blue;
+
+}
+
+.main {
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#robot {
+    background-color: red;
+    }
+
+#robot-head {
+    background-color: yellow;
+    text-align: center;
+}
+
+#robot-body {
+    background-color: yellow;
+    text-align: center;
+}
+
+#main-game-area {
+    background-color: red;
+    text-align: center;
+}
+
+.game-strip {
+    background-color: yellow;
+    justify-content: space-evenly;
+}
+
+#game-a-area {
+    background-color: green;
+    text-align: center;
+}
+
+#total-scores {
+    background-color: green;
+    text-align: center;
+}
+
+#game-b-area {
+    background-color: green;
+    text-align: center;
+}
+
+.game-strip {
+    display: flex;
+    align-items: stretch;
+}
+
+#game-b-scores {
+    background-color: purple;
+    text-align: center;
+}
+
+#game-a-scores {
+    background-color: purple;
+    text-align: center;
+}
+
+#footer-main {
+    background-color: blue;
+    text-align: center;
+    /*display: flex;
+   /* flex-direction: row;*/
+}
+
+#full-rules {
+    background-color: red;
+    text-align: center;
+
+}
+
+.copyright {
+    background-color: red;
+    text-align: center;
 }
