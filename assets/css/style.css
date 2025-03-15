@@ -52,6 +52,10 @@ header > h1 {
 #game-a-scores {
     background-color: purple;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 /*CSS effecting only Game B*/
@@ -64,13 +68,22 @@ header > h1 {
 #game-b-scores {
     background-color: purple;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 
 #combined-scores {
     background-color: green;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
+
 
 /*This CSS controls the robot area (The right of the screen)*/
 
@@ -86,6 +99,12 @@ header > h1 {
 #robot-body {
     background-color: yellow;
     text-align: center;
+
+}
+
+#robot-body > img {
+    max-width: 449px;
+    /*max-height: 200px;*/
 }
 
 /*Footer CSS*/
@@ -100,10 +119,15 @@ header > h1 {
 #full-rules {
     background-color: red;
     text-align: center;
+    
+}
 
+.revealed{
+    display:none
 }
 
 .copyright {
     background-color: red;
     text-align: center;
 }
+

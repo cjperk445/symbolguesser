@@ -53,13 +53,17 @@
             <button class="btn btn-primary">submit</button>
 
             <div id="game-a-scores" class="container">
-              <span class="scores">
-                Symbol Selector <p>Correct Answers <span id="game-a-score">0</span></p>
-              </span>
-              <span class="scores">
-                Symbol Selector Incorrect Answers
-                <span id="game-a-incorrect">0</span>
-              </span>
+                <div>
+                    <div>
+                        Symbol Selector <br>Correct Answers <span><i class="fa-solid fa-equals"></i></span><span id="game-a-score">0</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <div>
+                        Symbol Selector <br>Incorrect Answers <span><i class="fa-solid fa-equals"></i></span><span id="game-a-incorrect">0</span>
+                    </div>
+                </div>
             </div>
           </span>
         </div>
@@ -76,12 +80,17 @@
           <span id="game-b-area" class="answer-box"
             >answer box<button class="btn btn-primary">submit</button>
             <div id="game-b-scores" class="container">
-              <span class="scores">
-                Correct Answers<span id="game-b-score">0</span>
-              </span>
-              <span class="scores">
-                Incorrect Answers <span id="game-b-incorrect">0</span>
-              </span>
+                <div>
+                    <div>
+                        Maths Whizz <br>Correct Answers <span><i class="fa-solid fa-equals"></i></span><span id="game-b-score">0</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <div>
+                        Maths Whizz <br>Incorrect Answers <span><i class="fa-solid fa-equals"></i></span><span id="game-b-incorrect">0</span>
+                    </div>
+                </div>
             </div>
           </span>
         </div>
@@ -91,35 +100,42 @@
         <div class="game-strip container">
           <button class="btn btn-primary">SHOW SCORES</button>
           <div id="combined-scores" class="container">
-            <span class="scores">
-              Combined Correct Answers Total <span id="total-score">0</span>
-            </span>
-            <span class="scores">
-              Combined Incorrect Answers Total
-              <span id="total-incorrect">0</span>
-            </span>
+            <div>
+                <div>
+                    Combined <br>Correct Answers <span><i class="fa-solid fa-equals"></i></span><span id="total-score">0</span>
+                </div>
+            </div>
+            
+            <div>
+                <div>
+                    Combined <br>Incorrect Answers <span><i class="fa-solid fa-equals"></i></span><span id="total-incorrect">0</span>
+                </div>
+            </div>
           </div>
         </div>
       </div>
       <br />
 
       <div id="robot" class="container">
-        <div id="robot-head" class="container">head image</div>
-        <div id="robot-body" class="container">body image</div>
+        <!--<div id="robot-head" class="container">head image</div>-->
+        <div id="robot-body" class="container"><img src="assets/images/mathsrobot_default.webp" alt="Our Maths Robot genius, a happy colourful robot"></div>
       </div>
     </main>
     <footer id="footer-main" class="container">
       <div id="full-rules" class="container">
-        <button class="btn btn-primary">Reveal The Rules</button>The full rules
-        will be here
+        <button class="btn btn-primary">Reveal The Rules</button><span class="revealed">Full rules will be here</span>
       </div>
+
+      
+
       <div class="copyright"><p>Copyright Random house 2025</p></div>
     </footer>
 
     <!-- Link to my js script and to CDN jquery, local file there as fallback-->
-    <script src="assets/JS/script.js"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="assets/js/jquery-3.7.1.js"></script>
+    <script src="assets/JS/script.js"></script>
     <!--fONTAWESOME js-->
     <script
       src="https://kit.fontawesome.com/2253669881.js"
