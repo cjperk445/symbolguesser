@@ -26,6 +26,7 @@ header > h1 {
 
 .bubble {
     max-height: 200px;
+    align-self: flex-end;
 }
 
 
@@ -66,8 +67,7 @@ header > h1 {
 }
 
 
-
-#total-scores {
+#combined-scores {
     background-color: green;
     text-align: center;
 }
