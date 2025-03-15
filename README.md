@@ -6,7 +6,7 @@ fontawesome images
 https://pixabay.com/
 AI images created with microsoft autopilot
 
-font ides 
+font ideas 
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Press+Start+2P&display=swap');
