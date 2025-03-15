@@ -13,16 +13,36 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>  
-    <header id="main-header" class="container">The Maths Game</header>
+    <header id="main-header" class="container"><h1>The Maths Robot</h1></header>
 <br>
 
     <main class="container main"> . 
         <div id="main-game-area" class="container">.
-            <div class="game-strip container">Speech Bubble</div>
+            <div class="game-strip container"><img class="bubble" src="assets/images/speech bubble blank2.webp" alt="A speech bubble showing what the robot is saying">Speech Bubble</div>
 <br>
-            <div class="game-strip container"><button class="btn btn-primary">GAME A</button>
-                <span id="game-a-area" class="symbols">SYMBOLS <button class="btn btn-primary">submit</button>
-                    <div id="game-a-scores" class="container">correct scores and incorrect scores
+            <div id="game-a-area" class="game-strip container">
+                <button class="btn btn-primary">GAME A
+                </button>
+                <span>
+                  <button data-type="addition" class="btn btn-primary">
+                    <i class="fa-regular fa-square-plus"></i>
+                  </button>
+                  <button data-type="subtract" class="btn btn-primary">
+                    <i class="fa-regular fa-square-minus"></i>
+                  </button>
+                  <button data-type="multiply" class="btn btn-primary">
+                    <i class="fa-regular fa-square-xmark"></i>
+                  </button>
+                  <button data-type="divide" class="btn btn-primary">
+                    <i class="fa-regular fa-square-divide"></i>
+                  </button>
+                
+                
+                    <button class="btn btn-primary">submit</button>
+                
+                    <div id="game-a-scores" class="container">
+                        <p class="scores">Correct Answers <span id="game-a-score">0</span></p>
+                        <p class="scores">Incorrect Answers <span id="game-a-incorrect">0</span></p>
                     </div>
                 </span>
                 
@@ -63,6 +83,9 @@
     <script src="assets/JS/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src = "assets/js/jquery-3.7.1.js"></script>
+<!--fONTAWESOME js-->
+    <script src="https://kit.fontawesome.com/2253669881.js" crossorigin="anonymous"></script>
+
 </body>
 
 

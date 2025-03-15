@@ -5,10 +5,17 @@
     fifth color = purple
 */
 
+/*Header CSS*/
+
 #main-header {
     background-color: blue;
-
 }
+
+header > h1 {
+    text-align: center;
+}
+
+/*Main Body CSS*/
 
 .main {
     background-color: blue;
@@ -16,6 +23,56 @@
     flex-direction: row;
     
 }
+
+.bubble {
+    max-height: 200px;
+}
+
+
+#main-game-area {
+    background-color: red;
+    text-align: center;
+}
+
+.game-strip {
+    background-color: yellow;
+    justify-content: space-evenly;
+    display: flex;
+    /*align-items: stretch;*/
+}
+
+/*CSS effecting only Game A*/
+
+#game-a-area {
+    background-color: green;
+    text-align: center;
+}
+
+#game-a-scores {
+    background-color: purple;
+    text-align: center;
+}
+
+/*CSS effecting only Game B*/
+
+#game-b-area {
+    background-color: green;
+    text-align: center;
+}
+
+#game-b-scores {
+    background-color: purple;
+    text-align: center;
+}
+
+
+
+#total-scores {
+    background-color: green;
+    text-align: center;
+}
+
+/*This CSS controls the robot area (The right of the screen)*/
 
 #robot {
     background-color: red;
@@ -31,45 +88,7 @@
     text-align: center;
 }
 
-#main-game-area {
-    background-color: red;
-    text-align: center;
-}
-
-.game-strip {
-    background-color: yellow;
-    justify-content: space-evenly;
-}
-
-#game-a-area {
-    background-color: green;
-    text-align: center;
-}
-
-#total-scores {
-    background-color: green;
-    text-align: center;
-}
-
-#game-b-area {
-    background-color: green;
-    text-align: center;
-}
-
-.game-strip {
-    display: flex;
-    align-items: stretch;
-}
-
-#game-b-scores {
-    background-color: purple;
-    text-align: center;
-}
-
-#game-a-scores {
-    background-color: purple;
-    text-align: center;
-}
+/*Footer CSS*/
 
 #footer-main {
     background-color: blue;
