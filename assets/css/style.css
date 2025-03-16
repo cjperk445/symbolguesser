@@ -30,6 +30,64 @@ header > h1 {
     text-align: center;
 }
 
+/*CSS for all the buttons*/
+
+.game-button {
+    background-color: var(--primary-color);
+    border-color: var(--highlight-color-secondary);
+    color: var(--highlight-color-light)
+
+}
+
+.game-button:hover {
+    background-color:var(--highlight-color-light);
+    border-color: var(--highlight-color);
+    color: var(--tertiary-color);
+}
+
+.question-button {
+
+}
+
+.question-button:hover {
+
+}
+
+.info-button {
+    background-color:var(--highlight-color-light);
+    border-color: var(--highlight-color);
+    color: var(--tertiary-color);
+
+}
+
+.info-button:hover {
+    background-color: var(--primary-color);
+    border-color: var(--highlight-color-secondary);
+    color: var(--highlight-color-light)
+
+}
+
+.submit-button {
+    background-color: var(--primary-color);
+    border-color: var(--highlight-color-secondary);
+    color: var(--highlight-color-light)
+
+}
+
+.submit-button:hover {
+    background-color:var(--highlight-color-light);
+    border-color: var(--highlight-color);
+    color: var(--tertiary-color);
+    
+}
+
+.centred-button {
+    align-self: center;
+}
+
+.btn {
+    font-family: var(--secondary-font);
+}
 /*Main Body CSS*/
 
 .main {
@@ -54,14 +112,14 @@ header > h1 {
 .speech-bubble {
     position: absolute;
     padding: 20px;
-    top: 50%;
-    right: 50%;
+    top: 8%;
+    right: 23%;
     font-family: var(--secondary-font);
+    font-size: 0.8rem;
 }
 
 .bubble {
     max-height: 200px;
-    align-self: flex-end;
 }
 
 
@@ -74,7 +132,7 @@ header > h1 {
     background-color: yellow;
     justify-content: space-evenly;
     display: flex;
-    /*align-items: stretch;*/
+   
 }
 
 /*CSS effecting only Game A*/
@@ -111,7 +169,7 @@ header > h1 {
 
 
 #combined-scores {
-    background-color: green;
+    background-color: green; 
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -139,7 +197,8 @@ header > h1 {
 }
 
 #robot-body > img {
-    max-width: 449px;
+    max-width: 395px;
+    object-fit: contain;
     /*max-height: 200px;*/
 }
 
@@ -158,6 +217,17 @@ header > h1 {
     
 }
 
+#rules-box {
+    padding: 30px;
+}
+
+#rules-box > div > h3 {
+    font-family: var(--secondary-font);
+}
+
+#rules-box > div >  p {
+    font-family: var(--primary-font);
+}
 
 .copyright {
     background-color: red;

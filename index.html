@@ -16,44 +16,49 @@
     <!--My Stylesheet lower to override the bootstrap-->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
+
   <body>
     <header id="main-header" class="container"><h1>The Maths Robot</h1></header>
-    <br />
+    
 
     <main class="container main">
-      
       <div id="main-game-area" class="container col-8">
-        
         <div id="speech-bubble-strip" class="game-strip container">
           <img
             class="bubble"
             src="assets/images/speech bubble blank2.webp"
             alt="A speech bubble showing what the robot is saying"
           />
-        <div class="speech-bubble">
-            <p>This is simply test text</p>
-        </div>
+          <div class="speech-bubble">
+            <p>Hello there! I'm Whizzy the maths robot, I have two fun games for you to play, 
+                please click on either the "symbol selector" button or the "maths whizz" button, 
+                if you want the full rules of the game please check the bottom of the page</p>
+          </div>
         </div>
 
         <br />
 
         <div id="game-a-area" class="game-strip container">
-          <button id="game-a-button" class="btn btn-primary">GAME A</button>
+          <div class="centred-button"><button id="game-a-button" class="btn btn-outline-primary game-button">
+            GAME A
+          </button></div>
           <span id="game-a-box" class="hidden">
-            <button data-type="addition" class="btn btn-primary">
+            <button data-type="addition" class="btn btn-primary info-button">
               <i class="fa-regular fa-square-plus"></i>
             </button>
-            <button data-type="subtract" class="btn btn-primary">
+            <button data-type="subtract" class="btn btn-primary info-button">
               <i class="fa-regular fa-square-minus"></i>
             </button>
-            <button data-type="multiply" class="btn btn-primary">
+            <button data-type="multiply" class="btn btn-primary info-button">
               <i class="fa-regular fa-square-xmark"></i>
             </button>
-            <button data-type="divide" class="btn btn-primary">
+            <button data-type="divide" class="btn btn-primary info-button">
               <i class="fa-regular fa-square-divide"></i>
             </button>
 
-            <button class="btn btn-primary">submit</button>
+            <button class="btn btn-outline-primary submit-button">
+              submit
+            </button>
 
             <div id="game-a-scores" class="container">
               <div>
@@ -78,16 +83,36 @@
         <br />
 
         <div class="game-strip container">
-          <div><button class="btn btn-primary">GIMME A QUESTION</button></div>
-          <div><h2>Number Strip</h2></div>
+          <div class="centred-button">
+            <button class="btn btn-outline-primary question-button">
+              GIMME A QUESTION
+            </button>
+          </div>
+          <div id="maths-sum" class="hidden">
+            <span id="operand1">0</span>
+            <span id="operator">x</span>
+            <span id="operand2">0</span>
+            <span>=</span>
+            <span id="answer">Answer</span>
+        </div>
         </div>
 
         <br />
 
         <div id="game-b-area" class="game-strip container">
-          <button id="game-b-button" class="btn btn-primary">GAME B</button>
-          <span id="game-b-box" class="hidden">
-            answer box<button class="btn btn-primary">submit</button>
+          <div class="centred-button">
+            <button id="game-b-button" class="btn btn-outline-primary game-button">
+              GAME B
+            </button>
+          </div>
+
+          <div id="game-b-box" class="hidden">
+            <p class="answer-message">Enter Your Answer:</p>
+            <input id="answer-box" type="number" /><button
+              class="btn btn-outline-primary submit-button"
+            >
+              Submit
+            </button>
             <div id="game-b-scores" class="container">
               <div>
                 <div>
@@ -105,17 +130,18 @@
                 </div>
               </div>
             </div>
-          </span>
+          </div>
         </div>
 
         <br />
 
         <div class="game-strip container">
-          <button id="combined-score-button" class="btn btn-primary">
-            SHOW MY <br>TOTAL SCORE
-          </button>
+          <div class="centred-button">
+            <button id="combined-score-button" class="btn btn-outline-primary info-button">
+            SHOW MY <br />TOTAL SCORE
+            </button>
+          </div>
           <span id="combined-scores-box" class="hidden">
-            
             <div id="game-b-scores" class="container">
               <div>
                 <div>
@@ -151,8 +177,26 @@
 
     <footer id="footer-main" class="container">
       <div id="full-rules" class="container">
-        <button class="btn btn-primary rules">Reveal The Rules</button
-        ><span id="rules-box" class="hidden">Full rules will be here</span>
+        <button class="btn btn-outline-primary rules info-button">
+          Reveal The Rules</button>
+        <div id="rules-box" class="hidden"> 
+            <div>
+                <h3>Here are the Rules!</h3>
+                <p>On this page there are two fun maths games for you to play. 
+                </p>
+            </div>
+            <div>
+                <h3>"Symbol Selector" </h3>
+                <p>After you've pressed the symbol selector button then press gimme a question button you will be faced with a maths sum
+                    However, the mathematical symbol will be missing, it's your job to figure out which symbol
+                    should be there. Click on the corresponding button and press submit when you're pleased with your answer.</p>
+            </div>
+            <div>
+                <h3>"Maths Whizz"</h3>
+                <p>When you click on Maths Whizz game then press gimme a question button you will be faced with a maths question.
+                    Then then answer the maths question that comes up. Press submit when you're happy with your answer.</p>
+            </div>
+        </div>
       </div>
 
       <div class="copyright"><p>Copyright Random house 2025</p></div>
