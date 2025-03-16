@@ -8,6 +8,4 @@ AI images created with microsoft autopilot
 
 font ideas 
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Press+Start+2P&display=swap');
-</style>
+color palette https://paperheartdesign.com/blog/color-palette-awesome-space

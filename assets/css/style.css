@@ -7,8 +7,23 @@
 
 /*Header CSS*/
 
+/*Google fonts import*/
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Press+Start+2P&display=swap');
+
+/*CSS variables*/
+:root {
+    --primary-font: "Audiowide", sans-serif;
+    --secondary-font: "Press Start 2P", cursive;
+    --primary-color: #062c43; 
+    --secondary-color: #054569;
+    --tertiary-color: #5591a9;
+    --highlight-color: #9ccddc;
+    --highlight-color-light:#ced7e0; 
+}
+
 #main-header {
     background-color: blue;
+    font-family: var(--primary-font);
 }
 
 header > h1 {
@@ -22,6 +37,26 @@ header > h1 {
     display: flex;
     flex-direction: row;
     
+}
+
+#speech-bubble-strip {
+    position: relative;
+    width: 784px;
+    height:200px;
+}
+
+#speech-bubble-strip img {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+}
+
+.speech-bubble {
+    position: absolute;
+    padding: 20px;
+    top: 50%;
+    right: 50%;
+    font-family: var(--secondary-font);
 }
 
 .bubble {

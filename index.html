@@ -21,15 +21,18 @@
     <br />
 
     <main class="container main">
-      .
-      <div id="main-game-area" class="container">
-        .
-        <div class="game-strip container">
+      
+      <div id="main-game-area" class="container col-8">
+        
+        <div id="speech-bubble-strip" class="game-strip container">
           <img
             class="bubble"
             src="assets/images/speech bubble blank2.webp"
             alt="A speech bubble showing what the robot is saying"
           />
+        <div class="speech-bubble">
+            <p>This is simply test text</p>
+        </div>
         </div>
 
         <br />
@@ -53,17 +56,21 @@
             <button class="btn btn-primary">submit</button>
 
             <div id="game-a-scores" class="container">
+              <div>
                 <div>
-                    <div>
-                        Symbol Selector <br>Correct Answers <span><i class="fa-solid fa-equals"></i></span><span id="game-a-score">0</span>
-                    </div>
+                  Symbol Selector <br />Correct Answers
+                  <span><i class="fa-solid fa-equals"></i></span
+                  ><span id="game-a-score">0</span>
                 </div>
-                
+              </div>
+
+              <div>
                 <div>
-                    <div>
-                        Symbol Selector <br>Incorrect Answers <span><i class="fa-solid fa-equals"></i></span><span id="game-a-incorrect">0</span>
-                    </div>
+                  Symbol Selector <br />Incorrect Answers
+                  <span><i class="fa-solid fa-equals"></i></span
+                  ><span id="game-a-incorrect">0</span>
                 </div>
+              </div>
             </div>
           </span>
         </div>
@@ -75,24 +82,28 @@
           <div><h2>Number Strip</h2></div>
         </div>
 
-        <br>
+        <br />
 
         <div id="game-b-area" class="game-strip container">
           <button id="game-b-button" class="btn btn-primary">GAME B</button>
-          <span id="game-b-box" class="answer-box hidden">
+          <span id="game-b-box" class="hidden">
             answer box<button class="btn btn-primary">submit</button>
             <div id="game-b-scores" class="container">
+              <div>
                 <div>
-                    <div>
-                        Maths Whizz <br>Correct Answers <span><i class="fa-solid fa-equals"></i></span><span id="game-b-score">0</span>
-                    </div>
+                  Maths Whizz <br />Correct Answers
+                  <span><i class="fa-solid fa-equals"></i></span
+                  ><span id="game-b-score">0</span>
                 </div>
-                
+              </div>
+
+              <div>
                 <div>
-                    <div>
-                        Maths Whizz <br>Incorrect Answers <span><i class="fa-solid fa-equals"></i></span><span id="game-b-incorrect">0</span>
-                    </div>
+                  Maths Whizz <br />Incorrect Answers
+                  <span><i class="fa-solid fa-equals"></i></span
+                  ><span id="game-b-incorrect">0</span>
                 </div>
+              </div>
             </div>
           </span>
         </div>
@@ -100,42 +111,55 @@
         <br />
 
         <div class="game-strip container">
-          <button id="combined-score-button" class="btn btn-primary">SHOW SCORES</button>
-          <div id="combined-scores" class="container hidden">
-            <div>
-                <div>
-                    Combined <br>Correct Answers <span><i class="fa-solid fa-equals"></i></span><span id="total-score">0</span>
-                </div>
-            </div>
+          <button id="combined-score-button" class="btn btn-primary">
+            SHOW MY <br>TOTAL SCORE
+          </button>
+          <span id="combined-scores-box" class="hidden">
             
-            <div>
-
+            <div id="game-b-scores" class="container">
+              <div>
                 <div>
-                    Combined <br>Incorrect Answers <span><i class="fa-solid fa-equals"></i></span><span id="total-incorrect">0</span>
+                  Total <br />Correct Answers
+                  <span><i class="fa-solid fa-equals"></i></span
+                  ><span id="game-b-score">0</span>
                 </div>
+              </div>
+
+              <div>
+                <div>
+                  Total <br />Incorrect Answers
+                  <span><i class="fa-solid fa-equals"></i></span
+                  ><span id="game-b-incorrect">0</span>
+                </div>
+              </div>
             </div>
-          </div>
+          </span>
         </div>
       </div>
       <br />
 
-      <div id="robot" class="container">
+      <div id="robot" class="container col-4">
         <!--<div id="robot-head" class="container">head image</div>-->
-        <div id="robot-body" class="container"><img src="assets/images/mathsrobot_default.webp" alt="Our Maths Robot genius, a happy colourful robot"></div>
+        <div id="robot-body" class="container">
+          <img
+            src="assets/images/mathsrobot_default.webp"
+            alt="Our Maths Robot genius, a happy colourful robot"
+          />
+        </div>
       </div>
     </main>
+
     <footer id="footer-main" class="container">
       <div id="full-rules" class="container">
-        <button class="btn btn-primary rules">Reveal The Rules</button><span id="rules-box" class="hidden">Full rules will be here</span>
+        <button class="btn btn-primary rules">Reveal The Rules</button
+        ><span id="rules-box" class="hidden">Full rules will be here</span>
       </div>
-
-      
 
       <div class="copyright"><p>Copyright Random house 2025</p></div>
     </footer>
 
     <!-- Link to my js script and to CDN jquery, local file there as fallback-->
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="assets/js/jquery-3.7.1.js"></script>
     <script src="assets/JS/script.js"></script>

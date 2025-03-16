@@ -26,7 +26,8 @@ $(document).ready(function() {
     })
 
     $("#combined-score-button").click(function(){
-        $("#combined-scores").toggle();
+        $("#combined-scores-box").toggle();
+        $("#combined-scores-box").css({display: flex});
     })
 
 
