@@ -82,6 +82,7 @@ header > h1 {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    
 }
 
 
@@ -122,12 +123,17 @@ header > h1 {
     
 }
 
-.revealed{
-    display:none
-}
 
 .copyright {
     background-color: red;
     text-align: center;
 }
 
+/*Need to figure out which one of these to use*/
+.revealed{
+    display:none;
+}
+
+.hidden {
+    display: none;
+}

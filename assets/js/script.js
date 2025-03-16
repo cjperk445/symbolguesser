@@ -7,11 +7,22 @@ $(document).ready(function() {
     })
 
     $("#game-a-button").click(function(){
-        $("#game-a-box").toggle();
+        if($("#game-a-box").hasClass("hidden")){
+        $("#game-a-box").removeClass("hidden");
+        $("#game-b-box").addClass("hidden");
+        } else {
+            $("#game-a-box").addClass("hidden");
+        }
     })
 
     $("#game-b-button").click(function(){
-        $("#game-b-box").toggle();
+        if($("#game-b-box").hasClass("hidden")){
+            $("#game-b-box").removeClass("hidden");
+            $("#game-a-box").addClass("hidden");
+            } else {
+                $("#game-b-box").addClass("hidden");
+            }
+        
     })
 
     $("#combined-score-button").click(function(){
