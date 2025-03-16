@@ -16,10 +16,7 @@ function createSum() {
     let operators = ['+', '-', '*', '/'];
     let operator = operators[Math.floor(Math.random() * operators.length)];
 
-    //combine random numbers with the randomly chosen operator
-
-    let finalSum = `${num1} ${operator} ${num2}`;
-        
+            
     // Calculate the answer
 
     let answer;
@@ -27,40 +24,93 @@ function createSum() {
       if (operator === "+") {
           answer = num1 + num2;
       } else if (operator === "-") {
-          answer = num1 - num2;
+        if (num1 < num2) {
+            [num1, num2] = [num2, num1];
+            answer = num1 - num2;} else {
+               answer = num1 - num2;
+            }
       } else if (operator === "*" ) {
           answer = num1 * num2;
       }  else if (operator === "/"){
-	      answer = num1 / num2;
-      }   else {
+        while((num1 % num2)!==0){
+            num1 = Math.floor(Math.random() * 20) + 1;
+            num2 = Math.floor(Math.random() * 20) + 1;
+            answer = num1 / num2;
+      } }  else {
           alert(`Unknown Operator: ${operator}`);
-          throw `Unknown Operator: ${operator}. Oh the humanity! Aborting!`;
+          //throw 
+          //`Unknown Operator: ${operator}. Oh the humanity! Aborting!`;
       }
-    
-        return { question, answer };
-}
-   
+      
+      // Place the numbers, operator and answer in the correct elements
 
-    // Revealing button functions are below 
-   
-    $("#game-a-button").click(function(){
-        if($("#game-a-box").hasClass("hidden")){
-        $("#game-a-box").removeClass("hidden");
-        $("#game-b-box").addClass("hidden");
-        } else {
-            $("#game-a-box").addClass("hidden");
-        }
+      $("#operand1").text(num1);
+      $("#operand2").text(num2);
+      $("#operator").text(operator);
+      $("#answer").text(answer);
+
+       
+    }
+
+
+    function subtractionQuestion(operand1, operand2){
+        operand1 > operand2 ? operand1 : operand2;
+        operand1 > operand2 ? operand2 : operand1;
+        operand1 - operand2;
+    }
+
+    function divisionQuestion(operand1, operand2){
+        
+    }
+
+
+    $(".question-button").click(function(){
+        $("#maths-sum").removeClass("hidden");
+        createSum();
+
+
     })
+
+    // Button Jquery is below
+   
+    $("#game-a-button").click(function() {
+            // Toggle visibility of game-a-box and game-b-box
+            //this also changes the Active class
+            if ($("#game-a-box").hasClass("hidden")) {
+                $("#game-a-box").removeClass("hidden");
+                $("#game-a-box").addClass("active");
+                $("#game-b-box").addClass("hidden");
+                $("#game-b-box").removeClass("active");
+                $("#generic-text").addClass("hidden");
+                $("#game-b-text").addClass("hidden")
+                $("#game-a-text").removeClass("hidden");
+            } else {
+                $("#game-a-box").addClass("hidden");
+                $("#game-a-box").removeClass("active");
+                $("#generic-text").removeClass("hidden");
+                $("#game-a-text").addClass("hidden");
+                $("#game-b-text").addClass("hidden");
+            }
+        })
+       
 
     $("#game-b-button").click(function(){
-        if($("#game-b-box").hasClass("hidden")){
+        if ($("#game-b-box").hasClass("hidden")) {
             $("#game-b-box").removeClass("hidden");
+            $("#game-b-box").addClass("active");
             $("#game-a-box").addClass("hidden");
-            } else {
-                $("#game-b-box").addClass("hidden");
-            }
+            $("#game-a-box").removeClass("active");
+            $("#generic-text").addClass("hidden");
+            $("#game-a-text").addClass("hidden")
+            $("#game-b-text").removeClass("hidden");
+        } else {
+            $("#game-b-box").addClass("hidden");
+            $("#game-b-box").removeClass("active");
+            $("#generic-text").removeClass("hidden");
+            $("#game-b-text").addClass("hidden");
+            $("#game-a-text").addClass("hidden");
+        }})
         
-    })
 
     $("#combined-score-button").click(function(){
         $("#combined-scores-box").toggle();
@@ -71,6 +121,7 @@ function createSum() {
         $("#rules-box").toggle();
     })
 
+  
     
 
 

@@ -234,9 +234,12 @@ header > h1 {
     text-align: center;
 }
 
-/*Need to figure out which one of these to use*/
-.revealed{
-    display:none;
+
+/*important classes for JS*/
+
+.active {
+    border-style: dashed;
+    border-color: white;
 }
 
 .hidden {
