@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+    
 });
     
 /**
@@ -65,8 +66,9 @@ function createSum() {
 
 
     $(".question-button").click(function(){
-        $("#maths-sum").removeClass("hidden");
+        $("#maths-sum").removeClass("hidden").css("display","flex");
         createSum();
+        
 
 
     })
@@ -131,10 +133,25 @@ function createSum() {
        
     })
 
+    // Combined functionality of hiding a div and changing the original button text
     $(".rules").click(function(){
-        $("#rules-box").toggle();
+        if ($("#rules-box").hasClass("hidden")){
+            $("#rules-box").removeClass("hidden");
+            $(".rules").each(function(x){
+                var replace_text = $(this).text().replace("Reveal", "Hide");
+                $(this).text(replace_text);
+            })
+        }else{
+            $("#rules-box").addClass("hidden");
+            $(".rules").each(function(x){
+                var replace_text = $(this).text().replace("Hide", "Reveal");
+                $(this).text(replace_text);
+            })
+            }
+        })
        
-    })
+  
+    
 
   
     

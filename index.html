@@ -46,24 +46,28 @@
         <div id="game-a-area" class="game-strip container">
           <div class="centred-button"><button id="game-a-button" class="btn btn-outline-primary game-button">
             GAME A
-          </button></div>
-          <span id="game-a-box" class="hidden">
-            <button data-type="addition" class="btn btn-primary info-button">
-              <i class="fa-regular fa-square-plus"></i>
+          </button>
+        </div>
+        <div id="game-a-box" class="hidden">
+            <div id="symbols-box" class="container">
+          <span>
+            <button class="btn btn-primary info-button">
+                <i class="fa-solid fa-plus"></i>
             </button>
-            <button data-type="subtract" class="btn btn-primary info-button">
-              <i class="fa-regular fa-square-minus"></i>
+            <button  class="btn btn-primary info-button">
+                <i class="fa-solid fa-minus"></i>
             </button>
-            <button data-type="multiply" class="btn btn-primary info-button">
-              <i class="fa-regular fa-square-xmark"></i>
+            <button  class="btn btn-primary info-button">
+                <i class="fa-solid fa-xmark"></i>
             </button>
-            <button data-type="divide" class="btn btn-primary info-button">
-              <i class="fa-regular fa-square-divide"></i>
+            <button  class="btn btn-primary info-button">
+                <i class="fa-solid fa-divide"></i>
             </button>
 
             <button class="btn btn-outline-primary submit-button">
               submit
             </button>
+        </div>  
 
             <div id="game-a-scores" class="container">
               <div class="results-span">
@@ -84,6 +88,7 @@
             </div>
           </span>
         </div>
+        </div>
 
         <br />
 
@@ -93,7 +98,7 @@
               GIMME A QUESTION
             </button>
           </div>
-          <div id="maths-sum" class="hidden">
+          <div id="maths-sum" class="hidden col-6">
             <span id="operand1">0</span>
             <span id="operator">x</span>
             <span id="operand2">0</span>
