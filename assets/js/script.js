@@ -127,8 +127,13 @@ function createSum() {
         
 
     $("#combined-score-button").click(function(){
-        $("#combined-scores-box").toggle();
-        $("#combined-scores-box").css({display: flex});
+        if ($("#combined-scores-box").hasClass("hidden")) {
+            $("#combined-scores-box").removeClass("hidden");
+            $("#combined-scores-box").addClass("active");
+            $("#combined-scores-box").css({display: flex});
+        } else {
+            $("#combined-scores-box").addClass("hidden");
+            $("#combined-scores-box").removeClass("active");}
         
        
     });

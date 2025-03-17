@@ -112,6 +112,9 @@ body {
     align-self: center;
 }
 
+#combined-score-button {
+    margin: 0 20px;
+}
 .btn {
     font-family: var(--secondary-font);
 }
@@ -227,7 +230,7 @@ body {
     
 }
 
-#combined-scores-box, #game-a-scores, #game-b-scores {
+#combined-scores-box, #game-a-scores, #game-b-scores, #combined-scores {
     background-color: var(--highlight-color-light);
     padding: 15px;
     border-radius: 10px;
