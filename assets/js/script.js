@@ -153,21 +153,46 @@ function createSum() {
         // Add hover effect to all I elements within the class 'info-button'
         // On mouse enter, scale up the <i> element inside the button then
         // On mouse leave, reset the <i> element to its original size and ensure colors are correct
-    $(".info-button").hover(
-        function () {
-            $(this).find("i").css({
+    $(".choice-button").on('mouseenter',function(){
+        if($(this).hasClass("selected")){
+        }else{
+            $(this).css({
                 transform: "scale(1.2)",
-                transition: "transform 0.2s ease-in-out",
-                color: "var(--highlight-color)"
+                backgroundColor: "var(--primary-color)",
+                transition: "all 0.2s ease-in-out"})
+            .find("i").css({
+                transform: "scale(1.2)",
+                color: "var(--highlight-color)",
+                transition: "all 0.2s ease-in-out"   
             });
-        },
-        function () {
-            $(this).find("i").css({
+        }}).on('mouseleave', function(){
+            if($(this).hasClass("selected")){
+            }else{
+            $(this).css({
                 transform: "scale(1)",
-                transition: "transform 0.2s ease-in-out",
-                color: "var(--primary-color)"
+                backgroundColor: "",
+                transition: "all 0.2s ease-in-out"})
+            .find("i").css({
+                transform: "scale(1)",
+                color: "",
+                transition: "all 0.2s ease-in-out"   
             });
-        });
+        }});
+        
+  
+
+    $(".choice-button").click(function(){
+        $(".choice-button").not(this).removeClass("selected").css({
+            transform: "scale(1)",
+            backgroundColor: "",
+            color: "",
+            transition: "all 0.2s ease-in-out"   
+        }) .find("i").css({
+            transform: "scale(1)",
+            color: "",
+            transition: "all 0.2s ease-in-out"})
+        $(this).addClass("selected").children("i");
+    })
   
     
 
