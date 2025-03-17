@@ -31,12 +31,12 @@
           />
           <div class="speech-bubble">
             <p id="generic-text">Hello there! I'm Whizzy the maths robot, I have two fun games for you to play, 
-                please click on either the "symbol selector" button or the "maths whizz" button, 
+                please click on either the "Symbol Selector" button or the "Maths Whizz" button, 
                 if you want the full rules of the game please check the bottom of the page.</p>
-            <p id="game-a-text" class="hidden"><strong>"Symbol Selector"</strong> press "Gimme a Question" and a sum will pop up!
+            <p id="game-a-text" class="hidden"><strong>"Symbol Selector"</strong>. Press "Gimme a Question" and a sum will pop up!
                 However, the mathematical symbol will be missing, figure out which symbol
                 should be there and click on the corresponding symbol button and press submit.</p>
-            <p id="game-b-text" class="hidden">This is the Maths Whizz game! This game is straight forward - press the "Gimme a Question" button
+            <p id="game-b-text" class="hidden"> <strong>Maths Whizz</strong> This game is straight forward - press the "Gimme a Question" button
                 then answer the maths question that comes up. Press submit when you're happy with your answer.</p>
           </div>
         </div>
@@ -45,7 +45,7 @@
 
         <div id="game-a-area" class="game-strip container">
           <div class="centred-button"><button id="game-a-button" class="btn btn-outline-primary game-button">
-            GAME A
+            SYMBOL SELECTOR
           </button>
         </div>
         <div id="game-a-box" class="hidden">
@@ -57,7 +57,7 @@
             <button  class="btn btn-primary choice-button">
                 <i id="minus-chosen" class="fa-solid fa-minus"></i>
             </button>
-            <button  class="btn btn-primary choice-button selected">
+            <button  class="btn btn-primary choice-button">
                 <i id="times-chosen" class="fa-solid fa-xmark"></i>
             </button>
             <button  class="btn btn-primary choice-button">
@@ -65,24 +65,22 @@
             </button>
 
             <button class="btn btn-outline-primary submit-button">
-              submit
+              Submit
             </button>
         </div>  
 
             <div id="game-a-scores" class="container">
               <div class="results-span">
                 <div class="results-span">
-                  Symbol Selector <br />Correct Answers
-                  <span><i class="fa-solid fa-equals"></i></span
-                  ><span id="game-a-score">      0</span>
+                  Symbol Selector <br />Correct Answers<br>
+                  <div id="game-a-score" class="score-box">0</div>
                 </div>
               </div>
 
               <div class="results-span">
                 <div class="results-span">
-                  Symbol Selector <br />Incorrect Answers
-                  <span><i class="fa-solid fa-equals"></i></span
-                  ><span id="game-a-incorrect">      0</span>
+                  Symbol Selector <br />Incorrect Answers<br>
+                  <div id="game-a-incorrect" class="score-box">0</div>
                 </div>
               </div>
             </div>
@@ -112,7 +110,7 @@
         <div id="game-b-area" class="game-strip container">
           <div class="centred-button">
             <button id="game-b-button" class="btn btn-outline-primary game-button">
-              GAME B
+              MATHS WHIZZ
             </button>
           </div>
 
@@ -127,16 +125,14 @@
               <div class="results-span">
                 <div class="results-span">
                   Maths Whizz <br />Correct Answers
-                  <span><i class="fa-solid fa-equals"></i></span
-                  ><span id="game-b-score">     0</span>
+                  <div id="game-b-score"  class="score-box">     0</div>
                 </div>
               </div>
 
               <div class="results-span">
                 <div class="results-span">
                   Maths Whizz <br />Incorrect Answers
-                  <span><i class="fa-solid fa-equals"></i></span
-                  ><span id="game-b-incorrect">     0</span>
+                  <div id="game-b-incorrect"  class="score-box">     0</div>
                 </div>
               </div>
             </div>
