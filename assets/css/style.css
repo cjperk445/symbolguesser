@@ -64,22 +64,14 @@ body {
     color: var(--tertiary-color);
 }
 
-.question-button {
-
-}
-
-.question-button:hover {
-
-}
-
-.info-button, .choice-button {
+.info-button, .choice-button, .question-button {
     background-color:var(--highlight-color-light);
     border-color: var(--highlight-color);
     color: var(--tertiary-color);
 
 }
 
-.info-button:hover, .choice-button:hover {
+.info-button:hover, .choice-button:hover, .question-button:hover  {
     background-color: var(--primary-color);
     border-color: var(--highlight-color-secondary);
     color: var(--highlight-color-light);
@@ -313,7 +305,7 @@ body {
 /*Footer CSS*/
 
 footer {
-   margin-top: 40px;
+   margin-top: 20px;
    text-align: center;
    background-color: var(--tertiary-color);
    padding: 20px;
@@ -330,6 +322,10 @@ footer {
 #full-rules {
    text-align: center;
     
+}
+
+.rules {
+    margin-bottom: 20px;
 }
 
 #rules-box {

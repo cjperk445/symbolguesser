@@ -4,7 +4,7 @@ $(document).ready(function() {
 });
     
 /**
- * This Functoni is called upon to generate a random sum 
+ * This Function is called upon to generate a random sum 
  * that is used for both games on the page
  */
 function createSum() {
@@ -24,16 +24,18 @@ function createSum() {
     
       if (operator === "+") {
           answer = num1 + num2;
-      } else if (operator === "-") {
-        if (num1 < num2) {
+      } else if (operator === "-")
+        // if num1 is larger than num2 this swaps them around, thus avoiding a negative number.
+    {if (num1 < num2) {
             [num1, num2] = [num2, num1];
             answer = num1 - num2;} else {
                answer = num1 - num2;
             }
       } else if (operator === "*" ) {
           answer = num1 * num2;
-      }  else if (operator === "/"){
-        while((num1 % num2)!==0){
+      }  else if (operator === "/")
+        // this while loop checks to see if the numbers are wholly divisible, then iterates until they are.
+        {while((num1 % num2)!==0){
             num1 = Math.floor(Math.random() * 20) + 1;
             num2 = Math.floor(Math.random() * 20) + 1;
             answer = num1 / num2;
@@ -54,23 +56,10 @@ function createSum() {
     }
 
 
-    function subtractionQuestion(operand1, operand2){
-        operand1 > operand2 ? operand1 : operand2;
-        operand1 > operand2 ? operand2 : operand1;
-        operand1 - operand2;
-    }
-
-    function divisionQuestion(operand1, operand2){
-        
-    }
-
-
-    $(".question-button").click(function(){
+     $(".question-button").click(function(){
         $("#maths-sum").removeClass("hidden").css("display","flex");
         createSum();
-        
-
-
+    
     });
 
     // Button Jquery is below
@@ -125,18 +114,21 @@ function createSum() {
             $("#game-a-text").addClass("hidden");
         }});
         
-
+        // this will hide and unhide the combined score and will recalculate the total scores each time pressed
     $("#combined-score-button").click(function(){
         if ($("#combined-scores-box").hasClass("hidden")) {
             $("#combined-scores-box").removeClass("hidden");
             $("#combined-scores-box").addClass("active");
-            $("#combined-scores-box").css({display: flex});
+            showTotalScores();
+           // $("#combined-scores-box").css({display: "flex"});
         } else {
             $("#combined-scores-box").addClass("hidden");
-            $("#combined-scores-box").removeClass("active");}
-        
-       
+            $("#combined-scores-box").removeClass("active");
+            showTotalScores();} 
     });
+
+    
+
 
     // Combined functionality of hiding a div and changing the original button text
     $(".rules").click(function(){
@@ -198,7 +190,34 @@ function createSum() {
             transition: "all 0.2s ease-in-out"})
         $(this).addClass("selected").children("i");
     })
+
+    /**
+     * Show's combined scores and incorrect answers to both games in one place
+     */
   
+    function showTotalScores() {
+
+        //gather all the correct information and parse them into Integers
+
+        let gameACorrect = parseInt(document.getElementById("game-a-score").innerText);
+        let gameBCorrect = parseInt(document.getElementById("game-b-score").innerText);
+        let totalCorrect = gameACorrect + gameBCorrect;
+
+        let gameAIncorrect = parseInt(document.getElementById("game-a-incorrect").innerText);
+        let gameBIncorrect = parseInt(document.getElementById("game-b-incorrect").innerText);
+        let totalIncorrect = gameAIncorrect + gameBIncorrect;
+
+        // then place them in the correct places in the page
+
+        $("#combined-score").text(totalCorrect);
+        $("#combined-incorrect").text(totalIncorrect);
+
+        return {totalCorrect, totalIncorrect};
+
+
+
+    }
+
     
 
   
