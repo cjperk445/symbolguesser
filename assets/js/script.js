@@ -52,7 +52,7 @@ function createSum() {
 // Button Jquery is below
 
 $(".question-button").click(function () {
-  $("#maths-sum").removeClass("hidden").css("display", "flex");
+  $("#maths-sum").removeClass("hidden");
   createSum();
 });
 
@@ -80,6 +80,7 @@ $("#game-a-button").click(function () {
     $("#generic-text").removeClass("hidden");
     $("#game-a-text").addClass("hidden");
     $("#game-b-text").addClass("hidden");
+    $("#maths-sum").addClass("hidden");
   }
 });
 
@@ -104,6 +105,7 @@ $("#game-b-button").click(function () {
     $("#generic-text").removeClass("hidden");
     $("#game-b-text").addClass("hidden");
     $("#game-a-text").addClass("hidden");
+    $("#maths-sum").addClass("hidden");
   }
 });
 
@@ -196,6 +198,10 @@ $(".choice-button").click(function () {
   $(this).addClass("selected").children("i");
 });
 
+$("#game-a-submit").click(function(){
+    checkAnswerA();
+})
+
 $("#game-b-submit").click(function(){
     checkAnswerB();
 })
@@ -224,6 +230,10 @@ function showTotalScores() {
   return { totalCorrect, totalIncorrect };
 }
 
+function checkAnswerA() {
+
+}
+
 function checkAnswerB() {
 
     let userAnswerB = parseInt(document.getElementById("answer-box").value);
@@ -236,7 +246,7 @@ function checkAnswerB() {
         document.getElementById("answer-box").value = "";
         createSum();
     } else {
-        alert(`Does not compute! your answer ${userAnswerB} is not correct, the correct answer was ${correctAnswer} please do try again zzzt`);
+        alert(`Does not compute! Your answer ${userAnswerB} is not correct, the correct answer was ${correctAnswer} please do try again zzzt`);
         incrementWrongB();
         document.getElementById("answer-box").value = "";
         createSum();

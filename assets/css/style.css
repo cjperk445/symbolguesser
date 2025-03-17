@@ -266,6 +266,12 @@ body {
 
   #maths-sum span {
     font-size: 42px;
+    padding: 0 17px;
+  }
+
+  #answer-box {
+    text-align: center;
+    font-size: 2rem;
   }
 
   .results-span {
