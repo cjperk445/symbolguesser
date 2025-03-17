@@ -138,6 +138,11 @@ header > h1 {
 
 #main-game-area {
    text-align: center;
+   border: 4px solid var(--secondary-color);
+   border-radius: 15px;
+   background-color: var(--primary-color);
+   box-shadow: 0 4px 10px var(--secondary-color);
+   padding: 20px;
 }
 
 .game-strip {
@@ -196,10 +201,6 @@ header > h1 {
 #robot {
     }
 
-#robot-head {
-    text-align: center;
-}
-
 #robot-body {
     text-align: center;
 
@@ -208,10 +209,21 @@ header > h1 {
 #robot-body > img {
     max-width: 395px;
     object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--tertiary-color);
     /*max-height: 200px;*/
 }
 
 /*Footer CSS*/
+
+footer {
+   margin-top: 40px;
+   text-align: center;
+   background-color: var(--tertiary-color);
+   padding: 20px;
+   border-top: 4px solid var(--secondary-color);
+   color: var(--highlight-color-light);
+}
 
 #footer-main {
     text-align: center;
@@ -225,7 +237,12 @@ header > h1 {
 }
 
 #rules-box {
-    padding: 30px;
+  border: 2px solid var(--tertiary-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 10px var(--primary-color);
 }
 
 #rules-box > div > h3 {
