@@ -104,6 +104,7 @@ header > h1 {
 .main {
     display: flex;
     flex-direction: row;
+    margin-top: 15px;
     
 }
 
@@ -195,6 +196,23 @@ header > h1 {
     
 }
 
+#combined-scores-box, #game-a-scores, #game-b-scores, #maths-sum {
+    background-color: var(--highlight-color-light);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--tertiary-color);
+    box-shadow: 0 4px 10px var(--secondary-color);
+    color: var(--primary-color);
+  }
+
+  .results-span {
+    padding: 0 20px;
+  }
+
+  .total-results-span {
+    padding: 0 7px;
+  }
+
 
 /*This CSS controls the robot area (The right of the screen)*/
 
@@ -242,7 +260,7 @@ footer {
   margin-bottom: 20px;
   border-radius: 15px;
   background-color: var(--secondary-color);
-  box-shadow: 0 4px 10px var(--primary-color);
+  box-shadow: 0 4px 10px var(--secondary-color);
 }
 
 #rules-box > div > h3 {
@@ -251,6 +269,7 @@ footer {
 
 #rules-box > div >  p {
     font-family: var(--primary-font);
+    padding: 20px 0;
 }
 
 .copyright {
@@ -261,8 +280,15 @@ footer {
 /*important classes for JS*/
 
 .active {
-    border-style: dashed;
-    border-color: white;
+    border: 2px solid var(--tertiary-color);
+    padding: 20px;
+    border-radius: 15px;
+    background-color: var(--tertiary-color);
+    box-shadow: 0 4px 10px var(--primary-color);
+}
+
+.active > h3 {
+    color: var(--primary-color);
 }
 
 .hidden {
