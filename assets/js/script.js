@@ -81,9 +81,15 @@ function createSum() {
                 $("#game-a-box").addClass("active");
                 $("#game-b-box").addClass("hidden");
                 $("#game-b-box").removeClass("active");
+                //Changes the text in speech bubble
                 $("#generic-text").addClass("hidden");
                 $("#game-b-text").addClass("hidden")
                 $("#game-a-text").removeClass("hidden");
+                 // This is different for both games to hide the element required 
+                $("#operator").addClass("secret");
+                $("#answer").removeClass("secret");
+                // adding this to the game button stops the user from cheating by flipping between games
+                createSum();
             } else {
                 $("#game-a-box").addClass("hidden");
                 $("#game-a-box").removeClass("active");
@@ -100,9 +106,15 @@ function createSum() {
             $("#game-b-box").addClass("active");
             $("#game-a-box").addClass("hidden");
             $("#game-a-box").removeClass("active");
+            //Changes the text in speech bubble
             $("#generic-text").addClass("hidden");
             $("#game-a-text").addClass("hidden")
             $("#game-b-text").removeClass("hidden");
+            // This is different for both games to hide the element required 
+            $("#operator").removeClass("secret");
+            $("#answer").addClass("secret");
+            // adding this to the game button stops the user from cheating by flipping between games
+            createSum();
         } else {
             $("#game-b-box").addClass("hidden");
             $("#game-b-box").removeClass("active");
@@ -115,10 +127,13 @@ function createSum() {
     $("#combined-score-button").click(function(){
         $("#combined-scores-box").toggle();
         $("#combined-scores-box").css({display: flex});
+        
+       
     })
 
     $(".rules").click(function(){
         $("#rules-box").toggle();
+       
     })
 
   

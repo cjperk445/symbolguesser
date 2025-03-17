@@ -245,3 +245,8 @@ header > h1 {
 .hidden {
     display: none;
 }
+
+.secret {
+    visibility:hidden;
+    background-color: red;
+}
