@@ -21,8 +21,16 @@
     --highlight-color-light:#ced7e0; 
 }
 
+/* Apply global styling */
+body {
+    font-family: var(--primary-font);
+    background-color: var(--primary-color);
+    color: var(--highlight-color);
+    margin: 0;
+    padding: 0;
+  }
+
 #main-header {
-    background-color: blue;
     font-family: var(--primary-font);
 }
 
@@ -91,7 +99,6 @@ header > h1 {
 /*Main Body CSS*/
 
 .main {
-    background-color: blue;
     display: flex;
     flex-direction: row;
     
@@ -124,12 +131,10 @@ header > h1 {
 
 
 #main-game-area {
-    background-color: red;
-    text-align: center;
+   text-align: center;
 }
 
 .game-strip {
-    background-color: yellow;
     justify-content: space-evenly;
     display: flex;
    
@@ -138,12 +143,10 @@ header > h1 {
 /*CSS effecting only Game A*/
 
 #game-a-area {
-    background-color: green;
     text-align: center;
 }
 
 #game-a-scores {
-    background-color: purple;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -154,12 +157,10 @@ header > h1 {
 /*CSS effecting only Game B*/
 
 #game-b-area {
-    background-color: green;
-    text-align: center;
+   text-align: center;
 }
 
 #game-b-scores {
-    background-color: purple;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -169,7 +170,6 @@ header > h1 {
 
 
 #combined-scores {
-    background-color: green; 
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -182,16 +182,13 @@ header > h1 {
 /*This CSS controls the robot area (The right of the screen)*/
 
 #robot {
-    background-color: red;
     }
 
 #robot-head {
-    background-color: yellow;
     text-align: center;
 }
 
 #robot-body {
-    background-color: yellow;
     text-align: center;
 
 }
@@ -205,15 +202,13 @@ header > h1 {
 /*Footer CSS*/
 
 #footer-main {
-    background-color: blue;
     text-align: center;
     /*display: flex;
    /* flex-direction: row;*/
 }
 
 #full-rules {
-    background-color: red;
-    text-align: center;
+   text-align: center;
     
 }
 
@@ -230,7 +225,6 @@ header > h1 {
 }
 
 .copyright {
-    background-color: red;
     text-align: center;
 }
 
