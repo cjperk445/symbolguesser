@@ -37,9 +37,16 @@ body {
     border-bottom: 4px solid var(--secondary-color);
 }
 
-header > h1 {
-    text-align: center;
-}
+#heading {
+    border: 2px solid var(--tertiary-color);
+    padding: 20px 20px 10px 20px;
+    border-radius: 15px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 10px var(--secondary-color);
+    display: flex;
+    justify-content: center;
+  }
+
 
 /*CSS for all the buttons*/
 
@@ -342,6 +349,8 @@ footer {
 
 .copyright {
     text-align: center;
+    padding-top: 50px;
+    bottom:0;
 }
 
 
