@@ -231,8 +231,47 @@ function showTotalScores() {
 }
 
 function checkAnswerA() {
+    
+    let chosenAnswerButton = $(".choice-button.selected");
+    let correctAnswerA = document.getElementById("operator").innerText;
 
+    if (chosenAnswerButton.length === 0) {
+        alert("Please select a symbol before submitting!");
+        return; // Exit the function if no button is selected
+    }
+
+    // Get the ID of the selected button
+    let chosenAnswerA = chosenAnswerButton.attr("id");
+
+    // Map button IDs to symbols
+    if (chosenAnswerA === "addChosen") {
+        chosenAnswerA = "+";
+    } else if (chosenAnswerA === "minusChosen") {
+        chosenAnswerA = "-";
+    } else if (chosenAnswerA === "timesChosen") {
+        chosenAnswerA = "*";
+    } else if (chosenAnswerA === "divideChosen") {
+        chosenAnswerA = "/";
+    }
+
+    // Compare the user's choice with the correct answer
+    if (correctAnswerA === chosenAnswerA) {
+        alert(`Wow! Ding Ding Ding yes, the correct symbol is ${correctAnswerA}`);
+        incrementScoreA();
+        createSum();
+        $("#generic-robot").addClass("hidden");
+        $("#sad-robot").addClass("hidden");
+        $("#happy-robot").removeClass("hidden");
+        } else {
+        alert(`Womp womp, the correct answer was ${correctAnswerA}`);
+        incrementWrongA();
+        createSum();
+        $("#generic-robot").addClass("hidden");
+        $("#happy-robot").addClass("hidden");
+        $("#sad-robot").removeClass("hidden");
+    }
 }
+
 
 function checkAnswerB() {
 
@@ -245,11 +284,17 @@ function checkAnswerB() {
         incrementScoreB();
         document.getElementById("answer-box").value = "";
         createSum();
+        $("#generic-robot").addClass("hidden");
+        $("#sad-robot").addClass("hidden");
+        $("#happy-robot").removeClass("hidden");
     } else {
         alert(`Does not compute! Your answer ${userAnswerB} is not correct, the correct answer was ${correctAnswer} please do try again zzzt`);
         incrementWrongB();
         document.getElementById("answer-box").value = "";
         createSum();
+        $("#generic-robot").addClass("hidden");
+        $("#happy-robot").addClass("hidden");
+        $("#sad-robot").removeClass("hidden");
     }
 
 }
