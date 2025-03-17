@@ -85,10 +85,15 @@ header > h1 {
     background-color: var(--primary-color);
     border-color: var(--highlight-color-secondary);
     color: var(--highlight-color-light);
-    margin: 10px;
-
 }
 
+#game-a-submit {
+    margin: 28px 10px 0px 10px;
+}
+
+#game-b-submit {
+    margin: 10px;
+}
 .submit-button:hover {
     background-color:var(--highlight-color-light);
     border-color: var(--highlight-color);
