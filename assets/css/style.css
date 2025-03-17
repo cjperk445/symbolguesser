@@ -373,8 +373,7 @@ footer {
 
 /*Class for the parts of the sum which are "secret"*/
 .secret {
-    visibility:hidden;
-    background-color: red;
+    color: var(--highlight-color-light);
 }
 
 /*class for Game A - symbol selector */
