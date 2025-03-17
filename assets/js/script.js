@@ -71,7 +71,7 @@ function createSum() {
         
 
 
-    })
+    });
 
     // Button Jquery is below
    
@@ -85,7 +85,7 @@ function createSum() {
                 $("#game-b-box").removeClass("active");
                 //Changes the text in speech bubble
                 $("#generic-text").addClass("hidden");
-                $("#game-b-text").addClass("hidden")
+                $("#game-b-text").addClass("hidden");
                 $("#game-a-text").removeClass("hidden");
                  // This is different for both games to hide the element required 
                 $("#operator").addClass("secret");
@@ -99,7 +99,7 @@ function createSum() {
                 $("#game-a-text").addClass("hidden");
                 $("#game-b-text").addClass("hidden");
             }
-        })
+        });
        
 
     $("#game-b-button").click(function(){
@@ -110,7 +110,7 @@ function createSum() {
             $("#game-a-box").removeClass("active");
             //Changes the text in speech bubble
             $("#generic-text").addClass("hidden");
-            $("#game-a-text").addClass("hidden")
+            $("#game-a-text").addClass("hidden");
             $("#game-b-text").removeClass("hidden");
             // This is different for both games to hide the element required 
             $("#operator").removeClass("secret");
@@ -123,7 +123,7 @@ function createSum() {
             $("#generic-text").removeClass("hidden");
             $("#game-b-text").addClass("hidden");
             $("#game-a-text").addClass("hidden");
-        }})
+        }});
         
 
     $("#combined-score-button").click(function(){
@@ -131,7 +131,7 @@ function createSum() {
         $("#combined-scores-box").css({display: flex});
         
        
-    })
+    });
 
     // Combined functionality of hiding a div and changing the original button text
     $(".rules").click(function(){
@@ -140,16 +140,34 @@ function createSum() {
             $(".rules").each(function(x){
                 var replace_text = $(this).text().replace("Reveal", "Hide");
                 $(this).text(replace_text);
-            })
+            });
         }else{
             $("#rules-box").addClass("hidden");
             $(".rules").each(function(x){
                 var replace_text = $(this).text().replace("Hide", "Reveal");
                 $(this).text(replace_text);
-            })
+            });
             }
-        })
+        });
        
+        // Add hover effect to all I elements within the class 'info-button'
+        // On mouse enter, scale up the <i> element inside the button then
+        // On mouse leave, reset the <i> element to its original size and ensure colors are correct
+    $(".info-button").hover(
+        function () {
+            $(this).find("i").css({
+                transform: "scale(1.2)",
+                transition: "transform 0.2s ease-in-out",
+                color: "var(--highlight-color)"
+            });
+        },
+        function () {
+            $(this).find("i").css({
+                transform: "scale(1)",
+                transition: "transform 0.2s ease-in-out",
+                color: "var(--primary-color)"
+            });
+        });
   
     
 

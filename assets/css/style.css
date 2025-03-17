@@ -226,10 +226,10 @@ header > h1 {
     color: var(--primary-color);
   }
   
-  #symbols-box i:hover {
+  /*#symbols-box i:hover {
     transform: scale(1.5); 
     color: var(--highlight-color); 
-  }
+  }*/
  
   #maths-sum {
     background-color: var(--highlight-color-light);
@@ -350,5 +350,8 @@ footer {
 
 /*class for Game A - symbol selector */
 .selected {
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;
+    color: var(--highlight-color);
 
 }
