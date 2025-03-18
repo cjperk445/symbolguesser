@@ -51,6 +51,8 @@ function createSum() {
 
 // Button Jquery is below
 
+// This eventhandler shows the question area and generates a new question each time it's pressed
+// it also checks to see if either game is activated to ensure the correct element has the "secret" class
 $(".question-button").click(function () {
  $("#maths-sum").removeClass("hidden");
   createSum();
@@ -58,12 +60,12 @@ $(".question-button").click(function () {
     $("#operator").addClass("secret");
   } else {
     $("#operator").removeClass("secret");
-  };
+  }
   if($("#game-b-box").hasClass("active")){
     $("#answer").addClass("secret");
   } else {
     $("#answer").removeClass("secret");
-  };
+  }
   $("#generic-robot").removeClass("hidden");
   $("#happy-robot").addClass("hidden");
   $("#sad-robot").addClass("hidden");
@@ -128,7 +130,6 @@ $("#combined-score-button").click(function () {
     $("#combined-scores-box").removeClass("hidden");
     $("#combined-scores-box").addClass("active");
     showTotalScores();
-    // $("#combined-scores-box").css({display: "flex"});
   } else {
     $("#combined-scores-box").addClass("hidden");
     $("#combined-scores-box").removeClass("active");
@@ -140,13 +141,13 @@ $("#combined-score-button").click(function () {
 $(".rules").click(function () {
   if ($("#rules-box").hasClass("hidden")) {
     $("#rules-box").removeClass("hidden");
-    $(".rules").each(function (x) {
+    $(".rules").each(function() {
       var replace_text = $(this).text().replace("Reveal", "Hide");
       $(this).text(replace_text);
     });
   } else {
     $("#rules-box").addClass("hidden");
-    $(".rules").each(function (x) {
+    $(".rules").each(function() {
       var replace_text = $(this).text().replace("Hide", "Reveal");
       $(this).text(replace_text);
     });
@@ -192,6 +193,8 @@ $(".choice-button")
     }
   });
 
+// on click of one of the four mathematical symbols it will ensure only that button is "selected"
+// The button selected will also not react to the previous mouseenter and mouseleave event handlers
 $(".choice-button").click(function () {
   $(".choice-button")
     .not(this)
@@ -211,25 +214,30 @@ $(".choice-button").click(function () {
   $(this).addClass("selected").children("i");
 });
 
+// simple event handler to call up the function below
 $("#game-a-submit").click(function(){
     checkAnswerA();
-})
+});
 
+// simple event handler to call up the function below
 $("#game-b-submit").click(function(){
     checkAnswerB();
-})
+});
 
+
+// both the below event handlers allows the user to press return to sumbit their answers 
+// by running the exact same function there is no difference from pressing submit and return.
 $("#answer-box").on('keypress',function(e) {
     if(e.which == 13) {
         checkAnswerB();
-    };
+    }
 });
 
 $(".choice-button").on('keypress',function(e){
     if(e.which == 13){
         checkAnswerA();
-    };
-})
+    }
+});
 
 /**
  * Show's combined scores and incorrect answers to both games in one place
@@ -254,27 +262,34 @@ function showTotalScores() {
   return { totalCorrect, totalIncorrect };
 }
 
+/**
+ * Checks the answer given with the correct answer in game A,
+ *  then increments the correct areas accordingly
+ */
 function checkAnswerA() {
     
+    // this uses Jquery to only target elements that have both the classes .choice-button and .selected
     let chosenAnswerButton = $(".choice-button.selected");
     let correctAnswerA = document.getElementById("operator").innerText;
 
+    // this makes sure that entering the submit button with nothing selected doesn't work.
     if (chosenAnswerButton.length === 0) {
         alert("Please select a symbol before submitting!");
         return; // Exit the function if no button is selected
     }
 
-    // Get the ID of the selected button
+    // Get the ID of the selected button - with the way the CSS has been 
+    // written, only one button can ever have both .choice-button and selected simultaneously.
     let chosenAnswerA = chosenAnswerButton.attr("id");
 
     // Map button IDs to symbols
-    if (chosenAnswerA === "addChosen") {
+    if (chosenAnswerA === "addChosen"){
         chosenAnswerA = "+";
-    } else if (chosenAnswerA === "minusChosen") {
+    } else if (chosenAnswerA === "minusChosen"){
         chosenAnswerA = "-";
-    } else if (chosenAnswerA === "timesChosen") {
+    } else if (chosenAnswerA === "timesChosen"){
         chosenAnswerA = "*";
-    } else if (chosenAnswerA === "divideChosen") {
+    } else if (chosenAnswerA === "divideChosen"){
         chosenAnswerA = "/";
     }
 
@@ -296,13 +311,19 @@ function checkAnswerA() {
     }
 }
 
+/**
+ * Checks the answer given with the correct answer in game B,
+ *  then increments the correct areas accordingly
+ */
 
-function checkAnswerB() {
+function checkAnswerB(){
 
+    // Fetches the answer the user submitted and the correct answer
     let userAnswerB = parseInt(document.getElementById("answer-box").value);
     let correctAnswer = parseInt(document.getElementById("answer").innerText);
     let isCorrect = userAnswerB === correctAnswer;
 
+    // simple boolean result
     if(isCorrect){
         alert("Correctamundo zzzt you truly are a Whizz!");
         incrementScoreB();
@@ -323,11 +344,19 @@ function checkAnswerB() {
 
 }
 
+/**
+ * If correct answer is given to Game A, this will increase the total score by 1
+ */
+
 function incrementScoreA(){
     let oldScoreA = parseInt(document.getElementById("game-a-score").innerText);
     document.getElementById("game-a-score").innerText = ++oldScoreA;
 
 }
+
+/**
+ * If correct answer is given to Game B, this will increase the total score by 1
+ */
 
 function incrementScoreB(){
 
@@ -336,12 +365,20 @@ function incrementScoreB(){
 
 }
 
+/**
+ * If incorrect answer is given to Game A, this will increase the total incorrect tally by 1
+ */
+
 function incrementWrongA(){
 
     let oldScoreA = parseInt(document.getElementById("game-a-incorrect").innerText);
     document.getElementById("game-a-incorrect").innerText = ++oldScoreA;
     
 }
+
+/**
+ * If incorrect answer is given to Game B, this will increase the total incorrect tally by 1
+ */
 
 function incrementWrongB(){
 
@@ -350,4 +387,3 @@ function incrementWrongB(){
    
 
 }
-
