@@ -342,6 +342,7 @@ function incrementWrongA(){
     document.getElementById("game-a-incorrect").innerText = ++oldScoreA;
     
 }
+
 function incrementWrongB(){
 
     let oldScoreB = parseInt(document.getElementById("game-b-incorrect").innerText);
