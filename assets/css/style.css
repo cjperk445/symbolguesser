@@ -1,9 +1,3 @@
-/* top color = blue
-    second color = red
-    third color = yellow
-    fourth color = green
-    fifth color = purple
-*/
 
 /*Header CSS*/
 
@@ -78,8 +72,6 @@ body {
 
 }
 
-
-
 .submit-button {
     background-color: var(--primary-color);
     border-color: var(--highlight-color-secondary);
@@ -139,10 +131,6 @@ body {
     font-size: 0.8rem;
     color: var(--primary-color);
 }
-
-/* #game-a-text {
-    font-size: .7rem;
-}*/
 
 .bubble {
     max-height: 200px;
@@ -249,11 +237,7 @@ body {
     color: var(--primary-color);
   }
   
-  /*#symbols-box i:hover {
-    transform: scale(1.5); 
-    color: var(--highlight-color); 
-  }*/
- 
+  
   #maths-sum {
     background-color: var(--highlight-color-light);
     padding: 15px;
@@ -304,8 +288,6 @@ body {
 #robot-body > img {
     max-width: 395px;
     padding-right: 20px;
-    
-    /*max-height: 200px;*/
 }
 
 /*Footer CSS*/
@@ -321,8 +303,6 @@ footer {
 
 #footer-main {
     text-align: center;
-    /*display: flex;
-   /* flex-direction: row;*/
 }
 
 #full-rules {
