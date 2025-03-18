@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="The Maths Robot, a simple game of maths for people of all ages">
+    <meta name="keywords" content="game, maths, mathematical, fun, robot, space">
+    <title>The Maths Robot</title>
 
     <!-- Bootstrap CSS Link -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous">
 
     <!--My Stylesheet lower to override the bootstrap-->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
 
   <body>
     <header id="main-header" class="container-fluid">
         <div id="heading" class="container">
-            <h1>The Maths Robot</h1></header>
-        </div>
+            <h1>The Maths Robot</h1>
+        </div></header>
     
 
     <main class="container main">
@@ -29,9 +31,9 @@
         <div id="speech-bubble-strip" class="game-strip container">
           <img
             class="bubble"
-            src="assets/images/speech bubble blank2.webp"
+            src="assets/images/speech_bubble_blank2.webp"
             alt="A speech bubble showing what the robot is saying"
-          />
+          >
           <div class="speech-bubble">
             <p id="generic-text">Hello there! I'm Whizzy the maths robot, I have two fun games for you to play, 
                 please click on either the "Symbol Selector" button or the "Maths Whizz" button, 
@@ -44,7 +46,7 @@
           </div>
         </div>
 
-        <br />
+        <br>
 
         <div id="game-a-area" class="game-strip container">
           <div class="centred-button"><button id="game-a-button" class="btn btn-outline-primary game-button">
@@ -53,7 +55,6 @@
         </div>
         <div id="game-a-box" class="hidden">
             <div id="symbols-box" class="container">
-          <span>
             <button id="addChosen" class="btn btn-primary choice-button">
                 <i class="fa-solid fa-plus"></i>
             </button>
@@ -75,23 +76,22 @@
             <div id="game-a-scores" class="container">
               <div class="results-span">
                 <div class="results-span">
-                  Symbol Selector <br />Correct Answers<br>
+                  Symbol Selector <br>Correct Answers<br>
                   <div id="game-a-score" class="score-box">0</div>
                 </div>
               </div>
 
               <div class="results-span">
                 <div class="results-span">
-                  Symbol Selector <br />Incorrect Answers<br>
+                  Symbol Selector <br>Incorrect Answers<br>
                   <div id="game-a-incorrect" class="score-box">0</div>
                 </div>
               </div>
             </div>
-          </span>
         </div>
         </div>
 
-        <br />
+        <br>
 
         <div class="game-strip container">
           <div class="centred-button col-2">
@@ -108,7 +108,7 @@
         </div>
         </div>
 
-        <br />
+        <br>
 
         <div id="game-b-area" class="game-strip container">
           <div class="centred-button">
@@ -119,7 +119,7 @@
 
           <div id="game-b-box" class="hidden">
            <h3>Enter Your Answer:</h3>
-            <input id="answer-box" type="number" />
+            <input id="answer-box" type="number">
             <button id="game-b-submit"
               class="btn btn-outline-primary submit-button">
               Submit
@@ -127,14 +127,14 @@
             <div id="game-b-scores" class="container">
               <div class="results-span">
                 <div class="results-span">
-                  Maths Whizz <br />Correct Answers
+                  Maths Whizz <br>Correct Answers
                   <div id="game-b-score"  class="score-box">0</div>
                 </div>
               </div>
 
               <div class="results-span">
                 <div class="results-span">
-                  Maths Whizz <br />Incorrect Answers
+                  Maths Whizz <br>Incorrect Answers
                   <div id="game-b-incorrect"  class="score-box">0</div>
                 </div>
               </div>
@@ -142,34 +142,34 @@
           </div>
         </div>
 
-        <br />
+        <br>
 
         <div class="game-strip container">
           <div class="centred-button">
             <button id="combined-score-button" class="btn btn-outline-primary info-button">
-            SHOW MY <br />TOTAL SCORE
+            SHOW MY <br>TOTAL SCORE
             </button>
           </div>
-          <span id="combined-scores-box" class="hidden">
+          <div id="combined-scores-box" class="hidden">
             <div id="combined-scores" class="container">
               <div class="results-span">
                 <div class="results-span">
-                  Total <br />Correct Answers
+                  Total <br>Correct Answers
                   <span id="combined-score" class="score-box">0</span>
                 </div>
               </div>
 
               <div class="total-results-span">
                 <div class="total-results-span">
-                  Total <br />Incorrect Answers
+                  Total <br>Incorrect Answers
                   <span id="combined-incorrect" class="score-box">0</span>
                 </div>
               </div>
             </div>
-          </span>
+          </div>
         </div>
       </div>
-      <br />
+      <br>
 
       <div id="robot" class="container col-4">
         <!--<div id="robot-head" class="container">head image</div>-->
@@ -177,15 +177,15 @@
           <img id="generic-robot"
             src="assets/images/mathsrobot_default.webp"
             alt="Our Maths Robot genius, a happy colourful robot" 
-          />
+          >
           <img id="happy-robot"
             src="assets/images/mathsrobot_happy.webp"
             alt="Our Maths Robot genius, a delighted colourful robot" class="hidden"
-          />
+          >
           <img id="sad-robot"
             src="assets/images/mathsrobot_sad.webp"
             alt="Our Maths Robot genius, a normally happy colourful robot, but he looks a bit sad here" class="hidden"
-          />
+          >
         </div>
       </div>
     </main>
