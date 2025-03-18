@@ -52,8 +52,21 @@ function createSum() {
 // Button Jquery is below
 
 $(".question-button").click(function () {
-  $("#maths-sum").removeClass("hidden");
+ $("#maths-sum").removeClass("hidden");
   createSum();
+  if($("#game-a-box").hasClass("active")){
+    $("#operator").addClass("secret");
+  } else {
+    $("#operator").removeClass("secret");
+  };
+  if($("#game-b-box").hasClass("active")){
+    $("#answer").addClass("secret");
+  } else {
+    $("#answer").removeClass("secret");
+  };
+  $("#generic-robot").removeClass("hidden");
+  $("#happy-robot").addClass("hidden");
+  $("#sad-robot").addClass("hidden");
 });
 
 
@@ -206,6 +219,17 @@ $("#game-b-submit").click(function(){
     checkAnswerB();
 })
 
+$("#answer-box").on('keypress',function(e) {
+    if(e.which == 13) {
+        checkAnswerB();
+    };
+});
+
+$(".choice-button").on('keypress',function(e){
+    if(e.which == 13){
+        checkAnswerA();
+    };
+})
 
 /**
  * Show's combined scores and incorrect answers to both games in one place
