@@ -155,27 +155,33 @@ I used both [JShint](https://jshint.com/) and [Site24x7](https://www.site24x7.co
 - Took a lot of inspiration from the "Love Maths" module in the codeinstitute website. However I tried to change the code as much as I could to add my own twist to the maths game. Having two seperate games utilizing the same maths-sum threw up some challenges to overcome - such as switching which part of the sum was invisible. 
 - used the below code for pressing return on different https://stackoverflow.com/questions/979662/how-can-i-detect-pressing-enter-on-the-keyboard-using-jquery
 
+```
 $(document).on('keypress',function(e) {
     if(e.which == 13) {
         alert('You pressed enter!');
     }
 });
+```
 
 changed to 
 
+```
 $("#answer-box").on('keypress',function(e) {
     if(e.which == 13) {
         checkAnswerB();
     }
 });
+```
 
 and also used in 
 
-`$(".choice-button").on('keypress',function(e){
+```
+$(".choice-button").on('keypress',function(e){
     if(e.which == 13){
         checkAnswerA();
     }
-});`
+});
+```
 
 - 
 
