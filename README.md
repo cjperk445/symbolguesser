@@ -183,13 +183,10 @@ $(".choice-button").on('keypress',function(e){
 });
 ```
 
-- 
-
 
 ### Media
 
-- color palette https://paperheartdesign.com/blog/color-palette-awesome-space
-- robot https://pixabay.com/illustrations/robot-cartoon-cute-kid-toy-alien-7615434/
-- https://pixabay.com/
-- created my own speech bubble using [Gimp](https://www.gimp.org/)image creator 
+- I found a few color palettes I liked, I wanted to go for either a robot or space theme, The following color pallete is what I landed on, I checked the contrast on webaim and the contrast was deemed acceptable color palette [Paper Heart Design](https://paperheartdesign.com/blog/color-palette-awesome-space)
+- The main robot was taken from [Pixabay](https://pixabay.com/illustrations/robot-cartoon-cute-kid-toy-alien-7615434/)
+- I then created my own seperate faces for the robot in Gimp, and used jQuery to switch between faces if correct or incorrect answers were given created my own speech bubble using [Gimp](https://www.gimp.org/)image creator. 
 
