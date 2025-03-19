@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 Added jquery .js file to assets
 <br>
 images sourced from https://www.freepik.com/free-photos-vectors/mathematical-symbols

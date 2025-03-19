@@ -25,7 +25,6 @@ body {
   }
 
 #main-header {
-    font-family: var(--primary-font);
     background-color: var(--tertiary-color);
     padding: 20px;
     border-bottom: 4px solid var(--secondary-color);
