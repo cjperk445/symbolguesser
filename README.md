@@ -34,14 +34,14 @@ I decided to build a simple javascript based game called "The maths robot" which
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
--   [JS_ES6](https://en.wikipedia.org/wiki/JavaScript)
+-   [JS ES6](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Frameworks, Libraries & Programs Used
 
 - [Bootstrap 5.3.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
     - Bootstrap was used to utilize things such as column sizes and the container class
 - [jQuery 3.7.1](https://jquery.com/)
-    - jQuery was utilized extensively in writing the javascript, I found it wasy and intuitive to use to create eventhandlers and functions.
+    - jQuery was utilized extensively in writing the javascript, I found it easy and intuitive to use to create eventhandlers and functions.
 - [VSCode](https://code.visualstudio.com/)
     - This was the IDE I used, created by microsoft. 
 - [Google Fonts:](https://fonts.google.com/)
@@ -72,7 +72,7 @@ I created the above image just to see the whole page spread out, the plan was al
 I decided to seperate out the divs and their children into different boxes on canva to help visualize the final website better. 
 
 <div style="text-align: center">
-<img src="assets/images/wireframe_4_DIVS 2.png" width="33%" height="33%" alt="divs highlighted">
+<img src="assets/images/wireframe_4_DIVS 2.png" width="50%" height="50%" alt="divs highlighted">
 </div>
 
 In the above image the following colour scheme was used. 
@@ -84,7 +84,7 @@ In the above image the following colour scheme was used.
 I soon found that I would have about 4 or 5 levels within this structure so decided to create the basic framework within my html and utilizing simple colors in CSS to show the hierarchy visually. 
 
 <div style="text-align: center">
-<img src="assets/images/wireframe_div_colors.png.png" width="33%" height="33%" alt="divs highlighted in basic web layout">
+<img src="assets/images/wireframe_div_colors2.png" width="50%" height="50%" alt="divs highlighted in basic web layout">
 </div>
 
 As you can see there are more levels to the divs here. 
@@ -101,7 +101,9 @@ Having these bold colours show me the relationships between the levels within th
 
 ## Manual testing
 
-I went through each page and clicked on every link and ensured all features did what they were meant to do. 
+I went through each page and clicked on every link and ensured all features did what they were meant to do.
+
+Received a result of 98 in lighthouse in Devtools   
 
 
 
@@ -110,9 +112,17 @@ I went through each page and clicked on every link and ensured all features did 
 
 The HTML Validator used throughout was the [W3C](https://validator.w3.org/) Validator. Final checks on all pages flag up no errors nor warnings
 
+<div style="text-align: center">
+<img src="assets/images/html_checked.png" width="50%" height="50%" alt="html validation">
+</div>
+
 ### CSS Validator
 
 The CSS Validator used throughout was the [W3C](jigsaw.w3.org/css-validator/) Validator. All checks were clear
+
+<div style="text-align: center">
+<img src="assets/images/csschecked.png" width="50%" height="50%" alt="css validation">
+</div>
 
 ### JS Validation
 
@@ -142,8 +152,31 @@ I used both [JShint](https://jshint.com/) and [Site24x7](https://www.site24x7.co
 ## Credits
 
 ### Code
-- 
-- 
+- Took a lot of inspiration from the "Love Maths" module in the codeinstitute website. However I tried to change the code as much as I could to add my own twist to the maths game. Having two seperate games utilizing the same maths-sum threw up some challenges to overcome - such as switching which part of the sum was invisible. 
+- used the below code for pressing return on different https://stackoverflow.com/questions/979662/how-can-i-detect-pressing-enter-on-the-keyboard-using-jquery
+
+$(document).on('keypress',function(e) {
+    if(e.which == 13) {
+        alert('You pressed enter!');
+    }
+});
+
+changed to 
+
+$("#answer-box").on('keypress',function(e) {
+    if(e.which == 13) {
+        checkAnswerB();
+    }
+});
+
+and also used in 
+
+`$(".choice-button").on('keypress',function(e){
+    if(e.which == 13){
+        checkAnswerA();
+    }
+});`
+
 - 
 
 
