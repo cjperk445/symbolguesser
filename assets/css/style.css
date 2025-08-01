@@ -28,6 +28,7 @@ body {
     background-color: var(--tertiary-color);
     padding: 20px;
     border-bottom: 4px solid var(--secondary-color);
+    text-align: center;
 }
 
 #heading {
@@ -47,7 +48,8 @@ body {
     background-color: var(--primary-color);
     border-color: var(--highlight-color-secondary);
     color: var(--highlight-color-light);
-    margin-right: 10px;
+    /* margin-right: 10px; */
+    margin: 10px 10px 20px 0;
 
 }
 
@@ -76,6 +78,21 @@ body {
     border-color: var(--highlight-color-secondary);
     color: var(--highlight-color-light);
 }
+
+.choice-button {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    max-width: 20px;
+
+}
+
+/* .choice-button i {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+  } */
+
 
 #game-a-submit {
     margin: 28px 10px 0px 10px;
@@ -111,6 +128,7 @@ body {
 }
 
 #speech-bubble-strip {
+    display: none;
     position: relative;
     width: 784px;
     height:200px;
@@ -143,7 +161,8 @@ body {
    background-color: var(--primary-color);
    box-shadow: 0 4px 10px var(--secondary-color);
    padding: 20px;
-   margin-right: 15px;
+   /* margin-right: 15px; */
+   
 }
 
 .game-strip {
@@ -162,13 +181,27 @@ body {
 
 #game-a-area {
     text-align: center;
+    flex-flow: column wrap;
 }
 
 #game-a-scores {
-    text-align: center;
+    /* text-align: center;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center; */
+    /* text-align: center; */
+    /* flex-flow: column wrap; */
+    justify-content: center;
+}
+
+#game-a-box{
+    /* flex-flow: row wrap; */
+}
+
+#game-a-symbols {
+    display: flex;
+    flex-flow: row wrap;
     justify-content: center;
 }
 
@@ -220,7 +253,9 @@ body {
 }
 
 #symbols-box {
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
+    display: flex;
+    flex-flow: column wrap;
     padding-bottom: 20px;
 }
 
@@ -269,7 +304,8 @@ body {
 /*This CSS controls the robot area (The right of the screen)*/
 
 #robot {
-    display: flex;
+    /* display: flex; */
+    display: none;
     align-items: start;
     border: 4px solid var(--secondary-color);
     border-radius: 15px;
@@ -374,3 +410,56 @@ footer {
     color:var(--highlight-color)
 }
 
+/* Media Query at the end to add differences to screen sizes */
+
+/* Media query: large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+    
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) { 
+
+}
+
+    /* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+
+    #robot {
+        display: flex;
+        align-items: center;
+    }
+
+    #speech-bubble-strip {
+    display: flex;
+    }
+
+    /* #game-a-scores {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+} */
+
+.choice-button {
+     max-width: 100px;
+}
+
+#symbols-box {
+    justify-content: space-evenly;
+    
+    }
+
+#game-a-symbols {
+    flex-flow: row nowrap;
+}
+
+#game-a-area {
+    /* text-align: center; */
+    display: flex
+    flex-flow: row wrap;
+}
+
+
+}

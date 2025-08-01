@@ -27,13 +27,13 @@
     
 
     <main class="container main">
-      <div id="main-game-area" class="container col-8">
-        <div id="speech-bubble-strip" class="game-strip container">
+      <div id="main-game-area" class="container col-sm-12 col-md-8">
+        <div id="speech-bubble-strip" class="game-strip container col-sm-4">
           <img
             class="bubble"
             src="assets/images/speech_bubble_blank2.webp"
-            alt="A speech bubble showing what the robot is saying"
-          >
+            alt="A speech bubble showing what the robot is saying">
+          
           <div class="speech-bubble">
             <p id="generic-text">Hello there! I'm Whizzy the maths robot, I have two fun games for you to play, 
                 please click on either the "Symbol Selector" button or the "Maths Whizz" button, 
@@ -53,25 +53,28 @@
             SYMBOL SELECTOR
           </button>
         </div>
-        <div id="game-a-box" class="hidden">
+        <div id="game-a-box" class="hidden container col-sm-4 col-md-8 col-lg-12">
             <div id="symbols-box" class="container">
-            <button id="addChosen" class="btn btn-primary choice-button">
-                <i class="fa-solid fa-plus"></i>
-            </button>
-            <button id="minusChosen" class="btn btn-primary choice-button">
-                <i class="fa-solid fa-minus"></i>
-            </button>
-            <button id="timesChosen" class="btn btn-primary choice-button">
-                <i  class="fa-solid fa-xmark"></i>
-            </button>
-            <button id="divideChosen"  class="btn btn-primary choice-button">
-                <i  class="fa-solid fa-divide"></i>
-            </button>
-
-            <button id="game-a-submit" class="btn btn-outline-primary submit-button">
-              Submit
-            </button>
-        </div>  
+              <div id="game-a-symbols" class="container">
+                    <button id="addChosen" class="btn btn-primary choice-button">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <button id="minusChosen" class="btn btn-primary choice-button">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <button id="timesChosen" class="btn btn-primary choice-button">
+                        <i  class="fa-solid fa-xmark"></i>
+                    </button>
+                    <button id="divideChosen"  class="btn btn-primary choice-button">
+                        <i  class="fa-solid fa-divide"></i>
+                    </button>
+              </div>
+              <div>
+                <button id="game-a-submit" class="btn btn-outline-primary submit-button">
+                  Submit
+                </button>
+              </div>
+            </div>  
 
             <div id="game-a-scores" class="container">
               <div class="results-span">
