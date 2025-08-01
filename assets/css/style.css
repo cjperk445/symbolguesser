@@ -232,6 +232,14 @@ body {
     justify-content: center;
 }
 
+#gimme-a-question {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-flow: row wrap;
+}
+
+/* CSS for the score area */
 
 #combined-scores {
     text-align: center;
@@ -455,11 +463,34 @@ footer {
     flex-flow: row nowrap;
 }
 
-#game-a-area {
+/* #game-a-area {
     /* text-align: center; */
-    display: flex
+    /* display: flex
     flex-flow: row wrap;
+} */ 
+
+#game-a-area {
+   text-align: center;
 }
 
+#game-a-scores {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* #game-b-area {
+   text-align: center;
+}
+
+#game-b-scores {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+} */
 
 }
