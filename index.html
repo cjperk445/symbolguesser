@@ -49,12 +49,16 @@
         <br>
 
         <div id="game-a-area" class="game-strip container">
-          <div class="centred-button"><button id="game-a-button" class="btn btn-outline-primary game-button">
+
+          <div class="centred-button">
+            <button id="game-a-button" class="btn btn-outline-primary game-button">
             SYMBOL SELECTOR
-          </button>
-        </div>
-        <div id="game-a-box" class="hidden container col-sm-4 col-md-10 col-lg-12">
+            </button>
+          </div>
+
+        <div id="game-a-box" class="hidden container col-sm-4 col-md-10 col-lg-8">
             <div id="symbols-box" class="container">
+
               <div id="game-a-symbols" class="container">
                     <button id="addChosen" class="btn btn-primary choice-button">
                         <i class="fa-solid fa-plus"></i>
@@ -69,27 +73,35 @@
                         <i  class="fa-solid fa-divide"></i>
                     </button>
               </div>
+
               <div>
                 <button id="game-a-submit" class="btn btn-outline-primary submit-button">
                   Submit
                 </button>
               </div>
+
             </div>  
 
-            <div id="game-a-scores" class="container col-lg-8">
-              <div class="results-span">
+            <div id="game-a-scores" class="container col-lg-10">
+             
                 <div class="results-span">
-                  Symbol Selector <hr>Correct Answers<br>
-                  <div id="game-a-score" class="score-box">0</div>
-                </div>
-              </div>
 
-              <div class="results-span">
-                <div class="results-span">
-                  Symbol Selector <hr>Incorrect Answers<br>
-                  <div id="game-a-incorrect" class="score-box">0</div>
+                  <div class="results-span">
+                    Symbol Selector <hr>Correct Answers<br>
+                    <div id="game-a-score" class="score-box">0</div>
+                  </div>
+
                 </div>
-              </div>
+
+                <div class="results-span">
+
+                  <div class="results-span">
+                    Symbol Selector <hr>Incorrect Answers<br>
+                    <div id="game-a-incorrect" class="score-box">0</div>
+                  </div>
+
+                </div>
+              
             </div>
         </div>
         </div>
@@ -120,7 +132,7 @@
             </button>
           </div>
 
-          <div id="game-b-box" class="hidden">
+          <div id="game-b-box" class="hidden container col-sm-4 col-md-10 col-lg-8">
            <h3>Enter Your Answer:</h3>
             <input id="answer-box" type="number">
             <button id="game-b-submit"

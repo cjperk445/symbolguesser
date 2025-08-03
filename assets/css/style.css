@@ -96,6 +96,10 @@ body {
     margin: 0 auto;
   } */
 
+#game-b-box {
+    padding-right: 5px;
+    padding-left: 5px;
+}
 
 #game-a-submit {
     margin: 28px 10px 0px 10px;
@@ -121,6 +125,7 @@ body {
 .btn {
     font-family: var(--secondary-font);
 }
+
 /*Main Body CSS*/
 
 .main {
@@ -164,8 +169,7 @@ body {
    background-color: var(--primary-color);
    box-shadow: 0 4px 10px var(--secondary-color);
    padding: 20px;
-   /* margin-right: 15px; */
-   
+      
 }
 
 .game-strip {
@@ -192,13 +196,6 @@ body {
 }
 
 #game-a-scores {
-    /* text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; */
-    /* text-align: center; */
-    /* flex-flow: column wrap; */
     justify-content: center;
 }
 
@@ -219,7 +216,12 @@ body {
 /*CSS effecting only Game B*/
 
 #game-b-area {
-   text-align: center;
+    text-align: center;
+    flex-flow: column wrap;
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
 #game-b-scores {
@@ -272,16 +274,11 @@ body {
 }
 
 #symbols-box {
-    /* justify-content: space-evenly; */
     display: flex;
     flex-flow: column wrap;
     padding-bottom: 20px;
 }
 
-/* #symbols-box .choice-button {
-    padding: 0 20px;
-    margin: 0 20px;
-} */
 
 #symbols-box i {
     font-size: 2rem; 
@@ -310,6 +307,11 @@ body {
     text-align: center;
     font-size: 2rem;
   }
+
+  input, textarea { 
+    width: 80%; 
+
+}
 
   .results-span {
     padding: 0 20px;
@@ -439,6 +441,13 @@ footer {
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) { 
 
+    #game-a-scores{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 }
 
     /* Large devices (laptops and desktops, 992px and up) */
@@ -452,14 +461,6 @@ footer {
     #speech-bubble-strip {
     display: flex;
     }
-/* 
-    #game-a-scores {
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-} */
 
 .choice-button {
      max-width: 100px;
@@ -482,14 +483,6 @@ footer {
 
 #game-a-area {
    text-align: center;
-}
-
-#game-a-scores {
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
 }
 
 /* #game-b-area {
