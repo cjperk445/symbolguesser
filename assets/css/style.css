@@ -448,6 +448,10 @@ footer {
     align-items: center;
 }
 
+#game-b-scores { 
+    align-items: end;
+}
+
 }
 
     /* Large devices (laptops and desktops, 992px and up) */
@@ -475,27 +479,9 @@ footer {
     flex-flow: row nowrap;
 }
 
-/* #game-a-area {
-    /* text-align: center; */
-    /* display: flex
-    flex-flow: row wrap;
-} */ 
-
 #game-a-area {
    text-align: center;
 }
-
-/* #game-b-area {
-   text-align: center;
-}
-
-#game-b-scores {
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-} */
 
 #symbols-box .choice-button {
     padding: 0 20px;
