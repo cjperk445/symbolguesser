@@ -48,8 +48,7 @@ body {
     background-color: var(--primary-color);
     border-color: var(--highlight-color-secondary);
     color: var(--highlight-color-light);
-    /* margin-right: 10px; */
-    margin: 10px 10px 20px 0;
+    margin: 10px 0 20px 0;
 
 }
 
@@ -85,6 +84,10 @@ body {
     align-content: center;
     max-width: 20px;
 
+}
+
+.question-button {
+    margin-bottom: 20px;
 }
 
 /* .choice-button i {
@@ -182,6 +185,10 @@ body {
 #game-a-area {
     text-align: center;
     flex-flow: column wrap;
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
 #game-a-scores {
@@ -201,8 +208,12 @@ body {
 
 #game-a-symbols {
     display: flex;
-    flex-flow: row wrap;
     justify-content: center;
+}
+
+#game-a-symbols .choice-button {
+    margin: 0 10px;
+    padding: 0 20px;
 }
 
 /*CSS effecting only Game B*/
@@ -267,10 +278,10 @@ body {
     padding-bottom: 20px;
 }
 
-#symbols-box .choice-button {
+/* #symbols-box .choice-button {
     padding: 0 20px;
     margin: 0 20px;
-}
+} */
 
 #symbols-box i {
     font-size: 2rem; 
@@ -441,8 +452,8 @@ footer {
     #speech-bubble-strip {
     display: flex;
     }
-
-    /* #game-a-scores {
+/* 
+    #game-a-scores {
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -493,4 +504,19 @@ footer {
     justify-content: center;
 } */
 
+#symbols-box .choice-button {
+    padding: 0 20px;
+    margin: 0 20px;
+}
+
+.game-button, .info-button, .question-button {
+    margin: 10px 10px 20px 0;
+    padding: 20px;
+    font-size: 30px;
+
+}
+
+.question-button {
+    margin-right: 20px;
+    }
 }
