@@ -1,175 +1,166 @@
-
 /*Header CSS*/
 
 /*Google fonts import*/
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Press+Start+2P&display=swap");
 
 /*CSS variables*/
 :root {
-    --primary-font: "Audiowide", sans-serif;
-    --secondary-font: "Press Start 2P", cursive;
-    --primary-color: #062c43; 
-    --secondary-color: #054569;
-    --tertiary-color: #5591a9;
-    --highlight-color: #9ccddc;
-    --highlight-color-light:#ced7e0; 
+  --primary-font: "Audiowide", sans-serif;
+  --secondary-font: "Press Start 2P", cursive;
+  --primary-color: #062c43;
+  --secondary-color: #054569;
+  --tertiary-color: #5591a9;
+  --highlight-color: #9ccddc;
+  --highlight-color-light: #ced7e0;
 }
 
 /* Apply global styling */
 body {
-    font-family: var(--primary-font);
-    background-color: var(--primary-color);
-    color: var(--highlight-color);
-    margin: 0;
-    padding: 0;
-  }
+  font-family: var(--primary-font);
+  background-color: var(--primary-color);
+  color: var(--highlight-color);
+  margin: 0;
+  padding: 0;
+}
 
 #main-header {
-    background-color: var(--tertiary-color);
-    padding: 20px;
-    border-bottom: 4px solid var(--secondary-color);
-    text-align: center;
+  background-color: var(--tertiary-color);
+  padding: 20px;
+  border-bottom: 4px solid var(--secondary-color);
+  text-align: center;
 }
 
 #heading {
-    border: 2px solid var(--tertiary-color);
-    padding: 20px 20px 10px 20px;
-    border-radius: 15px;
-    background-color: var(--secondary-color);
-    box-shadow: 0 4px 10px var(--secondary-color);
-    display: flex;
-    justify-content: center;
-  }
-
+  border: 2px solid var(--tertiary-color);
+  padding: 20px 20px 10px 20px;
+  border-radius: 15px;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 10px var(--secondary-color);
+  display: flex;
+  justify-content: center;
+}
 
 /*CSS for all the buttons*/
 
 .game-button {
-    background-color: var(--primary-color);
-    border-color: var(--highlight-color-secondary);
-    color: var(--highlight-color-light);
-    margin: 10px 0 20px 0;
-
+  background-color: var(--primary-color);
+  border-color: var(--highlight-color-secondary);
+  color: var(--highlight-color-light);
+  margin: 10px 0 20px 0;
 }
 
 .game-button:hover {
-    background-color:var(--highlight-color-light);
-    border-color: var(--highlight-color);
-    color: var(--tertiary-color);
+  background-color: var(--highlight-color-light);
+  border-color: var(--highlight-color);
+  color: var(--tertiary-color);
 }
 
-.info-button, .choice-button, .question-button {
-    background-color:var(--highlight-color-light);
-    border-color: var(--highlight-color);
-    color: var(--tertiary-color);
-
+.info-button,
+.choice-button,
+.question-button {
+  background-color: var(--highlight-color-light);
+  border-color: var(--highlight-color);
+  color: var(--tertiary-color);
 }
 
-.info-button:hover, .choice-button:hover, .question-button:hover  {
-    background-color: var(--primary-color);
-    border-color: var(--highlight-color-secondary);
-    color: var(--highlight-color-light);
-
+.info-button:hover,
+.choice-button:hover,
+.question-button:hover {
+  background-color: var(--primary-color);
+  border-color: var(--highlight-color-secondary);
+  color: var(--highlight-color-light);
 }
 
 .submit-button {
-    background-color: var(--primary-color);
-    border-color: var(--highlight-color-secondary);
-    color: var(--highlight-color-light);
+  background-color: var(--primary-color);
+  border-color: var(--highlight-color-secondary);
+  color: var(--highlight-color-light);
 }
 
 .choice-button {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    max-width: 20px;
-
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-width: 20px;
 }
 
 .question-button {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-/* .choice-button i {
-    display: inline-block;
-    text-align: center;
-    margin: 0 auto;
-  } */
 
 #game-b-box {
-    padding-right: 5px;
-    padding-left: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 #game-a-submit {
-    margin: 28px 10px 0px 10px;
+  margin: 28px 10px 0px 10px;
 }
 
 #game-b-submit {
-    margin: 10px;
+  margin: 10px;
 }
 .submit-button:hover {
-    background-color:var(--highlight-color-light);
-    border-color: var(--highlight-color);
-    color: var(--tertiary-color);
-    
+  background-color: var(--highlight-color-light);
+  border-color: var(--highlight-color);
+  color: var(--tertiary-color);
 }
 
 .centred-button {
-    align-self: center;
+  align-self: center;
 }
 
 #combined-score-button {
-    margin: 0 20px;
+  margin: 0 20px;
 }
 .btn {
-    font-family: var(--secondary-font);
+  font-family: var(--secondary-font);
 }
 
 /*Main Body CSS*/
 
 .main {
-    display: flex;
-    flex-direction: row;
-    margin-top: 15px;
-    
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
 }
 
 #speech-bubble-strip {
-    display: none;
-    position: relative;
-    width: 784px;
-    height:200px;
+  display: none;
+  position: relative;
+  /* width: 784px; */
+  /* height:200px; */
+  width: 100%;
+  height: auto;
 }
 
 #speech-bubble-strip img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .speech-bubble {
-    position: absolute;
-    padding: 20px;
-    top: 8%;
-    right: 23%;
-    font-family: var(--secondary-font);
-    font-size: 0.8rem;
-    color: var(--primary-color);
+  position: absolute;
+  padding: 20px;
+  top: 8%;
+  right: 23%;
+  font-family: var(--secondary-font);
+  font-size: 0.8rem;
+  color: var(--primary-color);
 }
 
 .bubble {
-    max-height: 200px;
+  max-height: 200px;
 }
 
-
 #main-game-area {
-   text-align: center;
-   border: 4px solid var(--secondary-color);
-   border-radius: 15px;
-   background-color: var(--primary-color);
-   box-shadow: 0 4px 10px var(--secondary-color);
-   padding: 20px;
-      
+  text-align: center;
+  border: 4px solid var(--secondary-color);
+  border-radius: 15px;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 10px var(--secondary-color);
+  padding: 20px;
 }
 
 .game-strip {
@@ -181,213 +172,203 @@ body {
   border-radius: 15px;
   background-color: var(--secondary-color);
   box-shadow: 0 4px 10px var(--tertiary-color);
-   
 }
 
 /*CSS effecting only Game A*/
 
 #game-a-area {
-    text-align: center;
-    flex-flow: column wrap;
-    margin-right: 0;
-    margin-left: 0;
-    padding-right: 5px;
-    padding-left: 5px;
+  text-align: center;
+  flex-flow: column wrap;
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 #game-a-scores {
-    justify-content: center;
+  justify-content: center;
 }
 
-#game-a-box{
-    /* flex-flow: row wrap; */
-}
 
 #game-a-symbols {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #game-a-symbols .choice-button {
-    margin: 0 10px;
-    padding: 0 20px;
+  margin: 0 10px;
+  padding: 0 20px;
 }
 
 /*CSS effecting only Game B*/
 
 #game-b-area {
-    text-align: center;
-    flex-flow: column wrap;
-    margin-right: 0;
-    margin-left: 0;
-    padding-right: 5px;
-    padding-left: 5px;
+  text-align: center;
+  flex-flow: column wrap;
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 #game-b-scores {
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .score-box {
-    padding: 10px;
-    background-color: #062c43;
-    color: var(--highlight-color-light);
-    margin-top: 20px;
-    border-radius: 10px;
-    font-size: 2rem;
-    max-width: fit-content;
-    display: flex;
-    justify-self: center;
-    justify-content: center;
+  padding: 10px;
+  background-color: #062c43;
+  color: var(--highlight-color-light);
+  margin-top: 20px;
+  border-radius: 10px;
+  font-size: 2rem;
+  max-width: fit-content;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
 }
 
 #gimme-a-question {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-flow: row wrap;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-flow: row wrap;
 }
 
 /* CSS for the score area */
 
 #combined-scores-area {
-    text-align: center;
-    flex-flow: column wrap;
-    align-items: center;
-    margin-right: 0;
-    margin-left: 0;
-    padding-right: 5px;
-    padding-left: 5px;
-
+  text-align: center;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 #combined-scores {
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-#combined-scores-box, #game-a-scores, #game-b-scores, #combined-scores {
-    background-color: var(--highlight-color-light);
-    padding: 15px;
-    border-radius: 10px;
-    border: 2px solid var(--tertiary-color);
-    box-shadow: 0 4px 10px var(--secondary-color);
-    color: var(--primary-color);
- 
+#combined-scores-box,
+#game-a-scores,
+#game-b-scores,
+#combined-scores {
+  background-color: var(--highlight-color-light);
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid var(--tertiary-color);
+  box-shadow: 0 4px 10px var(--secondary-color);
+  color: var(--primary-color);
 }
 
 #combined-scores-box {
-    margin-top: 10px;
-    padding-right: 5px;
-    padding-left: 5px;
+  margin-top: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 #symbols-box {
-    display: flex;
-    flex-flow: column wrap;
-    padding-bottom: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  padding-bottom: 20px;
 }
-
 
 #symbols-box i {
-    font-size: 2rem; 
-    margin: 5px; 
-    transition: transform 0.2s;
-    color: var(--primary-color);
-  }
-  
-  
-  #maths-sum {
-    background-color: var(--highlight-color-light);
-    padding: 15px;
-    border-radius: 10px;
-    border: 2px solid var(--tertiary-color);
-    box-shadow: 0 4px 10px var(--secondary-color);
-    color: var(--primary-color);
-    justify-content: space-evenly;
-  }
-
-  .sum-box {
-    display: flex;
-    max-width: 100%;
-    flex-wrap: wrap;
-    font-size: 10px;
-  }
-
-  #maths-sum span {
-    font-size: 42px;
-    padding: 0 17px;
-  }
-
-  #answer-box {
-    text-align: center;
-    font-size: 2rem;
-  }
-
-  input, textarea { 
-    width: 80%; 
-
+  font-size: 2rem;
+  margin: 5px;
+  transition: transform 0.2s;
+  color: var(--primary-color);
 }
 
-  .total-results-span {
-    padding: 0 7px;
-  }
+#maths-sum {
+  background-color: var(--highlight-color-light);
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid var(--tertiary-color);
+  box-shadow: 0 4px 10px var(--secondary-color);
+  color: var(--primary-color);
+  justify-content: space-evenly;
+}
 
+.sum-box {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  font-size: 10px;
+}
+
+#maths-sum span {
+  font-size: 42px;
+  padding: 0 17px;
+}
+
+#answer-box {
+  text-align: center;
+  font-size: 2rem;
+}
+
+input,
+textarea {
+  width: 80%;
+}
+
+.total-results-span {
+  padding: 0 7px;
+}
 
 /*This CSS controls the robot area (The right of the screen)*/
 
 #robot {
-    /* display: flex; */
-    display: none;
-    align-items: start;
-    border: 4px solid var(--secondary-color);
-    border-radius: 15px;
-    background-color: var(--primary-color);
-    box-shadow: 0 4px 10px var(--secondary-color);
-    padding: 20px;
-    
-    }
+  /* display: flex; */
+  display: none;
+  align-items: start;
+  border: 4px solid var(--secondary-color);
+  border-radius: 15px;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 10px var(--secondary-color);
+  padding: 20px;
+}
 
 #robot-body {
-    text-align: center;
-
+  text-align: center;
 }
 
 #robot-body > img {
-    max-width: 395px;
-    padding-right: 20px;
+  max-width: 395px;
+  padding-right: 20px;
 }
 
 /*Footer CSS*/
 
 footer {
-   margin-top: 20px;
-   text-align: center;
-   background-color: var(--tertiary-color);
-   padding: 20px;
-   border-top: 4px solid var(--secondary-color);
-   color: var(--highlight-color-light);
+  margin-top: 20px;
+  text-align: center;
+  background-color: var(--tertiary-color);
+  padding: 20px;
+  border-top: 4px solid var(--secondary-color);
+  color: var(--highlight-color-light);
 }
 
 #footer-main {
-    text-align: center;
+  text-align: center;
 }
 
 #full-rules {
-   text-align: center;
-    
+  text-align: center;
 }
 
 .rules {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 #rules-box {
@@ -400,136 +381,146 @@ footer {
 }
 
 #rules-box > div > h3 {
-    font-family: var(--secondary-font);
+  font-family: var(--secondary-font);
 }
 
-#rules-box > div >  p {
-    font-family: var(--primary-font);
-    padding: 20px 0;
+#rules-box > div > p {
+  font-family: var(--primary-font);
+  padding: 20px 0;
 }
 
 .copyright {
-    text-align: center;
-    padding-top: 50px;
-    bottom:0;
+  text-align: center;
+  padding-top: 50px;
+  bottom: 0;
 }
-
 
 /*important classes for JS*/
 
 .active {
-    border: 2px solid var(--tertiary-color);
-    padding: 20px;
-    border-radius: 15px;
-    background-color: var(--tertiary-color);
-    box-shadow: 0 4px 10px var(--primary-color);
+  border: 2px solid var(--tertiary-color);
+  padding: 20px;
+  border-radius: 15px;
+  background-color: var(--tertiary-color);
+  box-shadow: 0 4px 10px var(--primary-color);
 }
 
 .active > h3 {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
-
 
 /*Class for the parts of the sum which are "secret"*/
 .secret {
-    color: var(--highlight-color-light);
+  color: var(--highlight-color-light);
 }
 
 /*class for Game A - symbol selector */
 .selected {
-    transform: scale(1.3);
-    background-color: var(--primary-color);
-    border-color: var(--highlight-color-secondary);
-    color: var(--highlight-color-light);
-    padding-bottom: 10px;
+  transform: scale(1.3);
+  background-color: var(--primary-color);
+  border-color: var(--highlight-color-secondary);
+  color: var(--highlight-color-light);
+  padding-bottom: 10px;
 }
 
 #symbols-box .selected > i {
-    color:var(--highlight-color)
+  color: var(--highlight-color);
 }
 
 /* Media Query at the end to add differences to screen sizes */
 
 /* Media query: large or landscape phones (576px and up) */
 @media screen and (min-width: 576px) {
-    
 }
 
 /* Media query: tablets and larger (768px and up) */
-@media screen and (min-width: 768px) { 
-
-    #game-a-scores{
+@media screen and (min-width: 768px) {
+  #game-a-scores {
     text-align: center;
     display: flex;
     flex-direction: row;
     align-items: center;
-}
+  }
 
-#game-b-scores { 
+  #game-b-scores {
     align-items: end;
-}
+  }
 
-.results-span {
+  .results-span {
     padding: 0 20px;
   }
 
+  #speech-bubble-strip {
+    display: flex;
+  }
+
+  #generic-text,
+  #game-a-text,
+  #game-b-text {
+    font-size: 9px;
+    padding: 0 20px 15px 20px;
+  }
 }
 
-    /* Large devices (laptops and desktops, 992px and up) */
+/* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-
-#robot {
+  #robot {
     display: flex;
     align-items: center;
-    }
+  }
 
-#speech-bubble-strip {
+  #speech-bubble-strip {
     display: flex;
-    }
+  }
 
-.choice-button {
-     max-width: 100px;
-}
+  .choice-button {
+    max-width: 100px;
+  }
 
-#symbols-box {
+  #symbols-box {
     justify-content: space-evenly;
-    
-    }
+  }
 
-#game-a-symbols {
+  #game-a-symbols {
     flex-flow: row nowrap;
-}
+  }
 
-#game-a-area {
-   text-align: center;
-}
+  #game-a-area {
+    text-align: center;
+  }
 
-#symbols-box .choice-button {
+  #symbols-box .choice-button {
     padding: 0 20px;
     margin: 0 20px;
-}
+  }
 
-.game-button, .info-button, .question-button {
+  .game-button,
+  .info-button,
+  .question-button {
     margin: 10px 10px 20px 0;
     padding: 20px;
     font-size: 30px;
+  }
 
-}
-
-.question-button {
+  .question-button {
     margin-right: 20px;
-    }
+  }
 
-.submit-button {
+  .submit-button {
     font-size: 20px;
-}
+  }
 
-.results-span {
+  .results-span {
     font-size: 25px;
   }
 
-}
+  #generic-text,
+  #game-a-text,
+  #game-b-text {
+    font-size: 15px;
+    padding: 10px 20px 0;
+  }
