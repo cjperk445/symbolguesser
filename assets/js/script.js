@@ -322,6 +322,7 @@ function checkAnswerB(){
     let userAnswerB = parseInt(document.getElementById("answer-box").value);
     let correctAnswer = parseInt(document.getElementById("answer").innerText);
     let isCorrect = userAnswerB === correctAnswer;
+    let isBlank = isNaN(userAnswerB);
 
     // simple boolean result
     if(isCorrect){
@@ -332,6 +333,13 @@ function checkAnswerB(){
         $("#generic-robot").addClass("hidden");
         $("#sad-robot").addClass("hidden");
         $("#happy-robot").removeClass("hidden");
+    } else if(isBlank) {
+        alert("BLEEP BLEEP BLEEP! You didn't put in an answer! please try again!");
+        document.getElementById("answer-box").value = "";
+        createSum();
+        $("#generic-robot").addClass("hidden");
+        $("#happy-robot").addClass("hidden");
+        $("#sad-robot").removeClass("hidden");    
     } else {
         alert(`Does not compute! Your answer ${userAnswerB} is not correct, the correct answer was ${correctAnswer} please do try again zzzt`);
         incrementWrongB();
