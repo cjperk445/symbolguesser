@@ -523,4 +523,13 @@ footer {
 .question-button {
     margin-right: 20px;
     }
+
+.submit-button {
+    font-size: 20px;
+}
+
+.results-span {
+    font-size: 25px;
+  }
+
 }
