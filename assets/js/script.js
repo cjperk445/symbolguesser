@@ -1,4 +1,4 @@
-$(document).ready(function () {});
+$(document).ready(function(){});
 
 /**
  * This Function is called upon to generate a random sum
@@ -20,7 +20,9 @@ function createSum() {
   if (operator === "+") {
     answer = num1 + num2;
   } else if (operator === "-") {
-    // if num1 is larger than num2 this swaps them around, thus avoiding a negative number.
+    /** if num1 is larger than num2 this swaps them around,
+     * thus avoiding a negative number.
+     */
     if (num1 < num2) {
       [num1, num2] = [num2, num1];
       answer = num1 - num2;
@@ -30,7 +32,9 @@ function createSum() {
   } else if (operator === "*") {
     answer = num1 * num2;
   } else if (operator === "/") {
-    // this while loop checks to see if the numbers are wholly divisible, then iterates until they are.
+    /** this while loop checks to see if the numbers are wholly divisible,
+      *then iterates until they are.
+      */
     while (num1 % num2 !== 0) {
       num1 = Math.floor(Math.random() * 20) + 1;
       num2 = Math.floor(Math.random() * 20) + 1;
@@ -51,8 +55,13 @@ function createSum() {
 
 // Button Jquery is below
 
-// This eventhandler shows the question area and generates a new question each time it's pressed
-// it also checks to see if either game is activated to ensure the correct element has the "secret" class
+/**
+* This eventhandler shows the question area and
+* generates a new question each time it's pressed
+* it also checks to see if either game is activated to
+*ensure the correct element has the "secret" class
+*/
+
 $(".question-button").click(function () {
  $("#maths-sum").removeClass("hidden");
   createSum();
@@ -87,7 +96,9 @@ $("#game-a-button").click(function () {
     // This is different for both games to hide the element required
     $("#operator").addClass("secret");
     $("#answer").removeClass("secret");
-    // adding this to the game button stops the user from cheating by flipping between games
+   /** adding this to the game button stops the user
+      * from cheating by flipping between games
+      */
     createSum();
   } else {
     $("#game-a-box").addClass("hidden");
@@ -112,7 +123,9 @@ $("#game-b-button").click(function () {
     // This is different for both games to hide the element required
     $("#operator").removeClass("secret");
     $("#answer").addClass("secret");
-    // adding this to the game button stops the user from cheating by flipping between games
+   /** adding this to the game button stops the user
+      * from cheating by flipping between games
+      */
     createSum();
   } else {
     $("#game-b-box").addClass("hidden");
@@ -124,7 +137,9 @@ $("#game-b-button").click(function () {
   }
 });
 
-// this will hide and unhide the combined score and will recalculate the total scores each time pressed
+/** this will hide and unhide the combined score
+* and will recalculate the total scores each time pressed
+*/
 $("#combined-score-button").click(function () {
   if ($("#combined-scores-box").hasClass("hidden")) {
     $("#combined-scores-box").removeClass("hidden");
@@ -142,74 +157,42 @@ $(".rules").click(function () {
   if ($("#rules-box").hasClass("hidden")) {
     $("#rules-box").removeClass("hidden");
     $(".rules").each(function() {
-      var replace_text = $(this).text().replace("Reveal", "Hide");
+      let replace_text = $(this).text().replace("Reveal", "Hide");
       $(this).text(replace_text);
     });
   } else {
     $("#rules-box").addClass("hidden");
     $(".rules").each(function() {
-      var replace_text = $(this).text().replace("Hide", "Reveal");
+      let replace_text = $(this).text().replace("Hide", "Reveal");
       $(this).text(replace_text);
     });
   }
 });
 
-// Add hover effect to all <i> elements within the class 'info-button'
-// On mouse enter, scale up the <i> element inside the button then
-// On mouse leave, reset the <i> element to its original size and ensure colors are correct
-$(".choice-button")
-  .on("mouseenter", function () {
-    if ($(this).hasClass("selected")) {
-    } else {
-      $(this)
-        .css({
-          transform: "scale(1.2)",
-          backgroundColor: "var(--primary-color)",
-          transition: "all 0.2s ease-in-out",
-        })
-        .find("i")
-        .css({
-          transform: "scale(1.2)",
-          color: "var(--highlight-color)",
-          transition: "all 0.2s ease-in-out",
-        });
-    }
-  })
-  .on("mouseleave", function () {
-    if ($(this).hasClass("selected")) {
-    } else {
-      $(this)
-        .css({
-          transform: "scale(1)",
-          backgroundColor: "",
-          transition: "all 0.2s ease-in-out",
-        })
-        .find("i")
-        .css({
-          transform: "scale(1)",
-          color: "",
-          transition: "all 0.2s ease-in-out",
-        });
-    }
-  });
-
-// on click of one of the four mathematical symbols it will ensure only that button is "selected"
-// The button selected will also not react to the previous mouseenter and mouseleave event handlers
+/** Add hover effect to all <i> elements within the class 'info-button'
+* On mouse enter, scale up the <i> element inside the button then
+* On mouse leave, reset the <i> element to its
+* original size and ensure colors are correct
+* on click of one of the four mathematical symbols
+* it will ensure only that button is "selected"
+* The button selected will also not react to the previous mouseenter
+* and mouseleave event handlers
+*/
 $(".choice-button").click(function () {
   $(".choice-button")
     .not(this)
     .removeClass("selected")
     .css({
-      transform: "scale(1)",
       backgroundColor: "",
       color: "",
-      transition: "all 0.2s ease-in-out",
+      transform: "scale(1)",
+      transition: "all 0.2s ease-in-out"
     })
     .find("i")
     .css({
-      transform: "scale(1)",
       color: "",
-      transition: "all 0.2s ease-in-out",
+      transform: "scale(1)",
+      transition: "all 0.2s ease-in-out"
     });
   $(this).addClass("selected").children("i");
 });
@@ -225,16 +208,19 @@ $("#game-b-submit").click(function(){
 });
 
 
-// both the below event handlers allows the user to press return to sumbit their answers 
-// by running the exact same function there is no difference from pressing submit and return.
-$("#answer-box").on('keypress',function(e) {
-    if(e.which == 13) {
+/** both the below event handlers allows the user
+* to press return to sumbit their answers
+* by running the exact same function there is
+* no difference from pressing submit and return.
+*/
+$("#answer-box").on("keypress",function(e) {
+    if(e.which === 13) {
         checkAnswerB();
     }
 });
 
-$(".choice-button").on('keypress',function(e){
-    if(e.which == 13){
+$(".choice-button").on("keypress",function(e){
+    if(e.which === 13){
         checkAnswerA();
     }
 });
@@ -267,19 +253,26 @@ function showTotalScores() {
  *  then increments the correct areas accordingly
  */
 function checkAnswerA() {
-    
-    // this uses Jquery to only target elements that have both the classes .choice-button and .selected
+/**  this uses Jquery to only target elements that have
+* both the classes .choice-button and .selected
+*/
     let chosenAnswerButton = $(".choice-button.selected");
     let correctAnswerA = document.getElementById("operator").innerText;
 
-    // this makes sure that entering the submit button with nothing selected doesn't work.
+    /**
+    * this makes sure that entering the submit
+    * button with nothing selected doesn't work.
+    */
     if (chosenAnswerButton.length === 0) {
         alert("Please select a symbol before submitting!");
         return; // Exit the function if no button is selected
     }
 
-    // Get the ID of the selected button - with the way the CSS has been 
-    // written, only one button can ever have both .choice-button and selected simultaneously.
+    /**
+    * Get the ID of the selected button - with the way the CSS has been
+    * written, only one button can ever have both .choice-button
+    * and selected simultaneously.
+    */
     let chosenAnswerA = chosenAnswerButton.attr("id");
 
     // Map button IDs to symbols
@@ -322,7 +315,7 @@ function checkAnswerB(){
     let userAnswerB = parseInt(document.getElementById("answer-box").value);
     let correctAnswer = parseInt(document.getElementById("answer").innerText);
     let isCorrect = userAnswerB === correctAnswer;
-    let isBlank = isNaN(userAnswerB);
+    let isBlank = Number.isNaN(userAnswerB);
 
     // simple boolean result
     if(isCorrect){
@@ -339,7 +332,7 @@ function checkAnswerB(){
         createSum();
         $("#generic-robot").addClass("hidden");
         $("#happy-robot").addClass("hidden");
-        $("#sad-robot").removeClass("hidden");    
+        $("#sad-robot").removeClass("hidden");
     } else {
         alert(`Does not compute! Your answer ${userAnswerB} is not correct, the correct answer was ${correctAnswer} please do try again zzzt`);
         incrementWrongB();
@@ -381,17 +374,18 @@ function incrementWrongA(){
 
     let oldScoreA = parseInt(document.getElementById("game-a-incorrect").innerText);
     document.getElementById("game-a-incorrect").innerText = ++oldScoreA;
-    
+
 }
 
 /**
- * If incorrect answer is given to Game B, this will increase the total incorrect tally by 1
+ * If incorrect answer is given to Game B, this will
+ *increase the total incorrect tally by 1
  */
 
 function incrementWrongB(){
 
     let oldScoreB = parseInt(document.getElementById("game-b-incorrect").innerText);
     document.getElementById("game-b-incorrect").innerText = ++oldScoreB;
-   
+
 
 }
