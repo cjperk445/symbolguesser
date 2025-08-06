@@ -433,10 +433,6 @@ footer {
 
 /* Media Query at the end to add differences to screen sizes */
 
-/* Media query: large or landscape phones (576px and up) */
-@media screen and (min-width: 576px) {
-}
-
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
   #game-a-scores {

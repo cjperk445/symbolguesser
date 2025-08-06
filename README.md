@@ -101,16 +101,27 @@ As you can see there are more levels to the divs here.
 
 Having these bold colours show me the relationships between the levels within the site helped when it came to writing CSS and JS to understand what divs were nested within each other for ease of targeting. 
 
-### Testing
+### Restructuring for CSS Responsiveness
+
+Upon submitting the project first time around I had failed to take into account the need for making sure the website was respoonsive to different screen sizes. I should have started from the mobile up design but focused on the laptop size instead. 
+
+I started restructuring the website to make it responsive by starting from the smallest screen size - I did this by hiding the Robot and the speech bubble as neither of these elements scaled down properly to look nice on the site. As the screen scales up the speech bubble re-appears at tablet size (768px and up) and then finally at the largest screen The Maths Robot appears. 
+
+By hiding the robot at the smallest screen size it allowed all the elements to be placed into one long column instead of two, after some fiddling with the CSS I was able to correct my mistakes from the original submission and now it hopefully is much cleaner and can be used at any screen size. 
+
+# Testing
 
 ## Manual testing
 
 I went through each page and clicked on every link and ensured all features did what they were meant to do.
 
-Received a result of 98 in lighthouse in Devtools   
+Received a result of 98 in lighthouse in Devtools 
+
+## Testing with Jest
 
 
 
+## Validation
 
 ### HTML Validator
 
@@ -132,7 +143,59 @@ The CSS Validator used throughout was the [W3C](jigsaw.w3.org/css-validator/) Va
 
 I used both [JShint](https://jshint.com/) and [Site24x7](https://www.site24x7.com/tools/javascript-validator.html) to validate the Javascript. Both sites kept alerting that "$" was an undefined variable however Site24x7 allows you to assume that we are using jQuery in the javascript. A few other small flags were that I was using ES6 functions however in testing with different browsers these didn't cause any issues. 
 
-To add an extra layer of validation to my Javascript I ran my code through [JSLint](https://jslint.com). When first put through it flagged up 
+To add an extra layer of validation to my Javascript I ran my code through [JSLint](https://jslint.com). When first put through it flagged up 190 errors, however many of these are the aforementioned "$" issue, to silence these errors so I could focus on fixable ones I appended the following code to the top of the javascript in JSHint 
+
+<div style="text-align: center">
+<img src="assets/images/readme/jslint_global_dollar.png" width="50%" height="50%" alt="code used to ignore the $ flag in JSS">
+</div>
+
+With the above code injected a more manageable 75 issues were highlighted
+
+<div style="text-align: center">
+<img src="assets/images/readme/jslint_75_errrors.png" width="50%" height="50%" alt="Original errors shown on JSList">
+</div>
+
+<br>
+Many of the issues were that certain lines of code were too long (mainly comments) and stray white spaces. I edited the options in JSLint to ignore a few things - namely that "this" and "alert" were unexpected and undefined as well as to stop flagging up that certain lines of code were too long. for example the following code: 
+
+
+```
+  let gameAIncorrect = parseInt(document.getElementById("game-a-incorrect").innerText);
+```
+
+Was being flagged as too long, however I didn't want to cut it down as it's easily readable. 
+One of the interesting errors/notes that came from JSList was the following:
+
+<div style="text-align: center">
+<img src="assets/images/readme/number_NaN_warning.png" width="50%" height="50%" alt="warning about number_NaN code">
+</div>
+
+Upon further research I found the following information: 
+
+<div style="text-align: center">
+<img src="assets/images/readme/numberis_NaN_info.png" width="50%" height="50%" alt="NaN code information">
+</div>
+
+<br>
+
+I then changed my original code which checked if the answer given in Game B was blank from the following
+
+```
+let isBlank = isNaN(userAnswerB);
+```
+
+to
+
+```
+let isBlank = Number.isNaN(userAnswerB);
+```
+After clearing nearly all the issues flagges I was left with the below:
+
+<div style="text-align: center">
+<img src="assets/images/readme/jslint_options_final_errors.png" width="50%" height="50%" alt="final errors after fixing the other 70">
+</div>
+
+I chose to leave these in the code as I could not find a better way to write the code other than use ++. 
 
 ## Deployment
 
@@ -194,5 +257,5 @@ $(".choice-button").on('keypress',function(e){
 
 - I found a few color palettes I liked, I wanted to go for either a robot or space theme, The following color pallete is what I landed on, I checked the contrast on webaim and the contrast was deemed acceptable color palette [Paper Heart Design](https://paperheartdesign.com/blog/color-palette-awesome-space)
 - The main robot was taken from [Pixabay](https://pixabay.com/illustrations/robot-cartoon-cute-kid-toy-alien-7615434/)
-- I then created my own seperate faces for the robot in Gimp, and used jQuery to switch between faces if correct or incorrect answers were given created my own speech bubble using [Gimp](https://www.gimp.org/)image creator. 
+- I then created my own seperate faces for the robot in Gimp, and used jQuery to switch between faces if correct or incorrect answers were given created my own speech bubble using [Gimp](https://www.gimp.org/) image creator. 
 
