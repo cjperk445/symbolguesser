@@ -113,6 +113,8 @@ I started restructuring the website to make it responsive by starting from the s
 
 By hiding the robot at the smallest screen size it allowed all the elements to be placed into one long column instead of two, after some fiddling with the CSS I was able to correct my mistakes from the original submission and now it hopefully is much cleaner and can be used at any screen size. 
 
+I then checked the website on [Responsive Design Checker](https://responsivedesignchecker.com/) to see what the site would look like on different devices, they seemed to look decent on most devices.
+
 # Testing
 
 ## Manual testing
@@ -134,25 +136,64 @@ Below is a table describing the manual testing I did on the website, essentially
 ### Game-A Functions
 |           Action            |                                Expectation                                 | Outcome |
 | :-------------------------: | :------------------------------------------------------------------------: | :-----: |
-|        Click on symbol selector button        |                          Speech bubble changes to Game A text (on larger screens), Game A appears                           |  Pass   |
-|       Click on Selector Button Again        |                 Speech bubble reverts to original and Game A disappears                |  Pass   |
-|    "+"  Button    |            On Hover - changes color              |  Fail - changes color but loses the symbol   |
-|    "+"  Button    |            On click - changes color and remains highlighted  - other buttons revert to normal           |  Pass   |
-|    "-"  Button  |           On Hover - changes color              |  Fail - changes color but loses the symbol   |
-|    "-"  Button  |            On click - changes color and remains highlighted  - other buttons revert to normal             |  Pass   |
-|    "/"  Button  |           On Hover - changes color              |  Fail - changes color but loses the symbol   |
-|    "/"  Button  |            On click - changes color and remains highlighted  - other buttons revert to normal              |  Pass   |
-|    "*"   Button  |           On Hover - changes color              |  Fail - changes color but loses the symbol   |
-|    "*"   Button  |           On click - changes color and remains highlighted  - other buttons revert to normal              |  Pass   |
+|        Click on symbol selector button        |                          Speech bubble changes to Game A text (on larger screens), Game A appears (game B disappears if open) if question box is visible it will generate a new question (no cheating!!)                         |  Pass   |
+|       Click on Selector Button Again        |                 Speech bubble reverts to original and Game A disappears, if question box is open it will close it as well.                |  Pass   |
+|    "+"  Button - On Hover   |           Changes color              |  Fail - changes color but loses the symbol   |
+|    "+"  Button - On click    |            Changes color and remains highlighted  - other buttons revert to normal           |  Pass   |
+|    "-"  Button - On Hover |            Changes color              |  Fail - changes color but loses the symbol   |
+|    "-"  Button - On click  |            Changes color and remains highlighted  - other buttons revert to normal             |  Pass   |
+|    "/"  Button - On Hover |            Changes color              |  Fail - changes color but loses the symbol   |
+|    "/"  Button - On click  |             Changes color and remains highlighted  - other buttons revert to normal              |  Pass   |
+|    "*"   Button - On Hover |            Changes color              |  Fail - changes color but loses the symbol   |
+|    "*"   Button - On click |            Changes color and remains highlighted  - other buttons revert to normal              |  Pass   |
+|    Submit Button -  On Hover  |            Changes color              |  Pass  |
+|    Submit  Button  - On click When no symbol selected   |          Alert tells you "Please select a symbol before submitting!"            |  Pass    |
+|    Submit  Button  - On click with incorrect symbol selected   |          Alert  for wrong answer - incorrect answer count increments, robot face goes angry. All symbols deselected and revert to normal colour, new question generated          |  Pass*(see below)  |
+|    Submit  Button  - On click with correct symbol selected   |          Alert  for correct answer - correct answer count increments, robot face smiles All symbols deselected and revert to normal colour,new question generated      |  Pass*(see below)    |
+
+
+*Originally when the correct or incorrect answer was selected in both Game A and Game B but no question had been officially generated the game would accept the answer even though the player had not seen it. I corrected this by putting in a simple if statement at beginning of the click events for both submit buttons. 
+
+```
+$("#game-b-submit").click(function(){
+  if($("#maths-sum").hasClass("hidden")){
+    alert("Bleep Bloop - No question Generated! Press Gimme a Question ZZZT")
+  } else {
+    checkAnswerB();
+}});
+```
+### Gimme a question button
+
+|           Action            |                                Expectation                                 | Outcome |
+| :-------------------------: | :------------------------------------------------------------------------: | :-----: |
+|        Click on Gimme a Question button when no game is selected       |                          A Maths sum Appears. With all elements revealed                            |  Pass   |
+|       Click on Gimme a Question button when Game A is selected         |                 A Maths sum Appears. With the operand hidden                |  Pass   |
+|       Click on Gimme a Question button when Game B is selected         |                A Maths sum Appears. With the sum total hidden            |  Pass   |
+|       Click on Gimme a Question button when question already visible         |                Generate a new maths sum            |  Pass   |
 
 
 ### Game-B Functions
+
+|           Action            |                                Expectation                                 | Outcome |
+| :-------------------------: | :------------------------------------------------------------------------: | :-----: |
+|        Click on "Maths Whizz" button        |                          Speech bubble changes to Game B text (on larger screens), Game B appears (game A disappears if open) if question box is visible it will generate a new question (no cheating!!)                         |  Pass   |
+|       Click on "Maths Whizz" Button Again        |                 Speech bubble reverts to original and Game B disappears, if question box is open it will close it as well.                |  Pass   |
+|    Submit Button -  On Hover  |            Changes color              |  Pass  |
+|    Submit  Button  - On click When answer input     |          Alert warns you that you didnt put in an answer, generates new maths sum           |  Pass    |
+|    Submit  Button  - On click with wrong number in answer box   |          Alert  for wrong answer - incorrect answer count increments, robot face goes angry. answer box cleared, new question generated         |  Pass*(see above)  |
+|    Submit  Button  - with correct number in answer box   |          Alert  for correct answer - correct answer count increments, robot face smiles answer box cleared, new question generated      |  Pass*(see above)    |
+
+
 ### Other Functions
 
+|           Action            |                                Expectation                                 | Outcome |
+| :-------------------------: | :------------------------------------------------------------------------: | :-----: |
+|        Click on Show my total score       |                          Total Scores box appears and adds up the total correct and incorrect answers                         |  Pass   |
+|       Click on Show my total score Again        |                scores become hidden again                |  Pass   |
+|       Click on Reveal the Rules        |                The rules appear and the button's text changes to "hide the rules"                |  Pass   |
+|       Click on Hide the rules        |                The rules disappear and the button's text changes to "reveal the rules"                |  Pass   |
+
 Received a result of 98 in lighthouse in Devtools 
-
-## Testing with Jest
-
 
 
 ## Validation
