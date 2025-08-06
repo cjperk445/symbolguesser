@@ -1,6 +1,10 @@
 
 # [The Maths Robot](https://cjperk445.github.io/symbolguesser/)
 
+<div style="text-align: center">
+<img src="assets/images/readme/amiresponsive.png" width="50%" height="50%" alt="an image showing the responsiveness of the site">
+</div>
+
 ## Introduction
 
 ### What is this Project?
@@ -113,7 +117,37 @@ By hiding the robot at the smallest screen size it allowed all the elements to b
 
 ## Manual testing
 
-I went through each page and clicked on every link and ensured all features did what they were meant to do.
+Below is a table describing the manual testing I did on the website, essentially this testing went from the top of the screen to the bottom. 
+
+### General site functions
+
+|           Action            |                                Expectation                                 | Outcome |
+| :-------------------------: | :------------------------------------------------------------------------: | :-----: |
+|           Button Hover - Symbol Selector           |                          When this button is hovered over it changes colour, then reverts to normal colour when it's not being hovered over                        |  Pass   |
+|           Button Hover - Gimme a question            |                         When this button is hovered over it changes colour, then reverts to normal colour when it's not being hovered over                            |  Pass   |
+|           Button Hover -Maths Whizz            |                          When this button is hovered over it changes colour, then reverts to normal colour when it's not being hovered over                         |  Pass   |
+|           Button Hover - Show my total Score           |                          When this button is hovered over it changes colour, then reverts to normal colour when it's not being hovered over                           |  Pass   |
+|           Button Hover- Reveal The Rules          |                          When this button is hovered over it changes colour, then reverts to normal colour when it's not being hovered over                      |  Pass   |
+| 
+
+
+### Game-A Functions
+|           Action            |                                Expectation                                 | Outcome |
+| :-------------------------: | :------------------------------------------------------------------------: | :-----: |
+|        Click on symbol selector button        |                          Speech bubble changes to Game A text (on larger screens), Game A appears                           |  Pass   |
+|       Click on Selector Button Again        |                 Speech bubble reverts to original and Game A disappears                |  Pass   |
+|    "+"  Button    |            On Hover - changes color              |  Fail - changes color but loses the symbol   |
+|    "+"  Button    |            On click - changes color and remains highlighted  - other buttons revert to normal           |  Pass   |
+|    "-"  Button  |           On Hover - changes color              |  Fail - changes color but loses the symbol   |
+|    "-"  Button  |            On click - changes color and remains highlighted  - other buttons revert to normal             |  Pass   |
+|    "/"  Button  |           On Hover - changes color              |  Fail - changes color but loses the symbol   |
+|    "/"  Button  |            On click - changes color and remains highlighted  - other buttons revert to normal              |  Pass   |
+|    "*"   Button  |           On Hover - changes color              |  Fail - changes color but loses the symbol   |
+|    "*"   Button  |           On click - changes color and remains highlighted  - other buttons revert to normal              |  Pass   |
+
+
+### Game-B Functions
+### Other Functions
 
 Received a result of 98 in lighthouse in Devtools 
 

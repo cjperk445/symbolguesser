@@ -1,4 +1,3 @@
-$(document).ready(function(){});
 
 /**
  * This Function is called upon to generate a random sum
@@ -197,15 +196,25 @@ $(".choice-button").click(function () {
   $(this).addClass("selected").children("i");
 });
 
+// let questionActive = document.getElementById("maths-sum").classList.contains("hidden");
+
 // simple event handler to call up the function below
-$("#game-a-submit").click(function(){
+$("#game-a-submit").click(function () {
+  if ($("#maths-sum").hasClass("hidden")) {
+    alert("BRRRRP You need to press 'Gimme a Question' first!!!");
+  } else {
     checkAnswerA();
+  }
 });
+
 
 // simple event handler to call up the function below
 $("#game-b-submit").click(function(){
+  if($("#maths-sum").hasClass("hidden")){
+    alert("Bleep Bloop - No question Generated! Press Gimme a Question ZZZT")
+  } else {
     checkAnswerB();
-});
+}});
 
 
 /** both the below event handlers allows the user
