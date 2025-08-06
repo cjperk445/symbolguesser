@@ -25,7 +25,7 @@ I decided to build a simple javascript based game called "The maths robot" which
 
 -   Fully interactive environment utilizing javascript and Jquery
 -   A reactive robot with very basic animation (facial features)
--  Two seperate games utilizing the same Maths equation.
+-   Two seperate games utilizing the same Maths equation.
 
 
 ## Technologies Used
@@ -56,6 +56,10 @@ I decided to build a simple javascript based game called "The maths robot" which
     - Gimp is a free to use alternative to Photoshop and was used to edit some images such as the robots face. 
 - [WebAim](https://webaim.org/resources/contrastchecker/)
     - Used to check that the colour scheme had sufficient contrast
+- [Jest 30.0](https://jestjs.io/)
+    - Testing infrastructure to test out Javascript.
+- [JSLint](https://www.jslint.com/)
+    - Used to go through the Javascript code to look for any inconsistencies or errors.
 
 
 ## Wireframes
@@ -64,7 +68,7 @@ Created using [Canva:](https://www.canva.com/) + using the local host server to 
 
 I created the original wireframes using Canva - I knew early on the rough layout for the site. I wanted a simple two large divs. The game area and the robot to the right. 
 <div style="text-align: center">
-<img src="assets/images/wireframe_1.png" width="33%" height="33%" alt="first sketch of site">
+<img src="assets/images/readme/wireframe_1.png" width="33%" height="33%" alt="first sketch of site">
 </div>
 
 I created the above image just to see the whole page spread out, the plan was always to have the games appear and dissappear depending on what button was chosen. 
@@ -72,7 +76,7 @@ I created the above image just to see the whole page spread out, the plan was al
 I decided to seperate out the divs and their children into different boxes on canva to help visualize the final website better. 
 
 <div style="text-align: center">
-<img src="assets/images/wireframe_4_DIVS 2.png" width="50%" height="50%" alt="divs highlighted">
+<img src="assets/images/readme/wireframe_4_DIVS 2.png" width="50%" height="50%" alt="divs highlighted">
 </div>
 
 In the above image the following colour scheme was used. 
@@ -84,7 +88,7 @@ In the above image the following colour scheme was used.
 I soon found that I would have about 4 or 5 levels within this structure so decided to create the basic framework within my html and utilizing simple colors in CSS to show the hierarchy visually. 
 
 <div style="text-align: center">
-<img src="assets/images/wireframe_div_colors2.png" width="50%" height="50%" alt="divs highlighted in basic web layout">
+<img src="assets/images/readme/wireframe_div_colors2.png" width="50%" height="50%" alt="divs highlighted in basic web layout">
 </div>
 
 As you can see there are more levels to the divs here. 
@@ -113,7 +117,7 @@ Received a result of 98 in lighthouse in Devtools
 The HTML Validator used throughout was the [W3C](https://validator.w3.org/) Validator. Final checks on all pages flag up no errors nor warnings
 
 <div style="text-align: center">
-<img src="assets/images/html_checked.png" width="50%" height="50%" alt="html validation">
+<img src="assets/images/readme/html_checked.png" width="50%" height="50%" alt="html validation">
 </div>
 
 ### CSS Validator
@@ -121,12 +125,14 @@ The HTML Validator used throughout was the [W3C](https://validator.w3.org/) Vali
 The CSS Validator used throughout was the [W3C](jigsaw.w3.org/css-validator/) Validator. All checks were clear
 
 <div style="text-align: center">
-<img src="assets/images/csschecked.png" width="50%" height="50%" alt="css validation">
+<img src="assets/images/readme/csschecked.png" width="50%" height="50%" alt="css validation">
 </div>
 
 ### JS Validation
 
-I used both [JShint](https://jshint.com/) and [Site24x7](https://www.site24x7.com/tools/javascript-validator.html) to validate the Javascript. Both sites kept alerting that "$" was an undefined variable however Site24x7 allows you to assume that we are using jQuery in the javascript. A few other small flags were that I was using ES6 functions however in testing with different browser these didn't cause any issues. 
+I used both [JShint](https://jshint.com/) and [Site24x7](https://www.site24x7.com/tools/javascript-validator.html) to validate the Javascript. Both sites kept alerting that "$" was an undefined variable however Site24x7 allows you to assume that we are using jQuery in the javascript. A few other small flags were that I was using ES6 functions however in testing with different browsers these didn't cause any issues. 
+
+To add an extra layer of validation to my Javascript I ran my code through [JSLint](https://jslint.com). When first put through it flagged up 
 
 ## Deployment
 
